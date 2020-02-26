@@ -1,0 +1,40 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+.gitignore
+d2-spring.zip
+d2-spring/.mvn/
+d2-spring/mvnw
+d2-spring/mvnw.cmd
+d2-spring/src/main/resources/static/
+d2-spring/src/main/resources/templates/
+d2-spring/Dockerfile
+docker-compose.yml
