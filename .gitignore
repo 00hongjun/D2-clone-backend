@@ -5,6 +5,12 @@ target/
 !**/src/main/**
 !**/src/test/**
 
+
+D2-clone-backend-master.zip
+d2-spring.zip
+mvnw
+mvnw.cmd
+
 ### STS ###
 .apt_generated
 .classpath
