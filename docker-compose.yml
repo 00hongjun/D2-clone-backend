@@ -1,43 +1,30 @@
-version: '3'
+version: '3.3'
 
 services:
-    spring:
-        image: openjdk:8-jdk-alpine
-        container_name: jdk-container
-        restart: always
+    mysql:
+        container_name: mysql
+        image: mysql:5.7
         volumes:
-            - ./d2-clone:/tmp
+            - ./mysql/data:/var/lib/mysql
+        environment:
+            MYSQL_DATABASE: test_db
+            MYSQL_USER: test
+            MYSQL_ROOT_PASSWORD: test
+            MYSQL_ROOT_HOST: '%'
+            ports : "3306:3306"
+
+    spring:
+        container_name: spring
+        build: ./d2-spring/.
         ports:
             - "8080:8080"
-        WORKDIR:
-
-    db:
-        image: postgres
-        volumes:
-        - ./docker/data:/var/lib/postgresql/data
-        environment:
-        - POSTGRES_DB=sampledb
-        - POSTGRES_USER=sampleuser
-        - POSTGRES_PASSWORD=samplesecret
-        - POSTGRES_INITDB_ARGS=--encoding=UTF-8
-
-    django:
-        build:
-        context: .
-        dockerfile: ./compose/django/Dockerfile-dev
-        environment:
-        - DJANGO_DEBUG=True
-        - DJANGO_DB_HOST=db
-        - DJANGO_DB_PORT=5432
-        - DJANGO_DB_NAME=sampledb
-        - DJANGO_DB_USERNAME=sampleuser
-        - DJANGO_DB_PASSWORD=samplesecret
-        - DJANGO_SECRET_KEY=dev_secret_key
-        ports:
-        - "8000:8000"
-        command: 
-        - python manage.py runserver 0:8000
-        volumes:
-        - ./:/app/
-
-        
+        depends_on:
+            - mysql
+#        image: openjdk:8-jdk-alpine
+#        container_name: jdk-container
+#        restart: always
+#        volumes:
+#            - ./d2-clone:/tmp
+#        ports:
+#            - "8080:8080"
+#        WORKDIR:

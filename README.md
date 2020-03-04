@@ -17,5 +17,7 @@ d2 clone 프로젝트 스터디
 
 # Getting Started
 
-...
+## 실행 방법
+1. cd ~/D2-clone-backend
+1. docker-compose up -d
 
