@@ -1,0 +1,22 @@
+server:
+    address: localhost
+    port: 8080
+
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/test_db?charactorEncoding=UTF-8&serverTiezone=UTC
+        username: root
+        password: test
+    jpa:
+        hibernate:
+            ddl-auto: update
+            use-new-id-generator-mappings: false
+    properties:
+        hibernate:
+        format_sql: true
+        hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+logging.level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
