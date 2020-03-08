@@ -11,7 +11,8 @@ services:
             MYSQL_USER: test
             MYSQL_ROOT_PASSWORD: test
             MYSQL_ROOT_HOST: '%'
-            ports : "3306:3306"
+        ports:
+            - "3306:3306"
 
     spring:
         container_name: spring
@@ -20,11 +21,3 @@ services:
             - "8080:8080"
         depends_on:
             - mysql
-#        image: openjdk:8-jdk-alpine
-#        container_name: jdk-container
-#        restart: always
-#        volumes:
-#            - ./d2-clone:/tmp
-#        ports:
-#            - "8080:8080"
-#        WORKDIR:
