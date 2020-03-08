@@ -25,6 +25,7 @@ mvnw.cmd
 *.iws
 *.iml
 *.ipr
+d2-spring/*.iml
 
 ### NetBeans ###
 /nbproject/private/
@@ -44,3 +45,4 @@ d2-spring/mvnw.cmd
 d2-spring/src/main/resources/static/
 d2-spring/src/main/resources/templates/
 d2-spring/Dockerfile
+mysql/data/
