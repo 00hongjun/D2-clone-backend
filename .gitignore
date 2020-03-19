@@ -9,7 +9,7 @@ target/
 D2-clone-backend-master.zip
 d2-spring.zip
 mvnw
-mvnw.cmd
+*.mvnw.cmd
 
 ### STS ###
 .apt_generated

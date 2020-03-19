@@ -1,16 +1,18 @@
 version: '3.3'
 
 services:
-    mysql:
+    mysql_db:
         container_name: mysql
         image: mysql:5.7
         volumes:
             - ./mysql/data:/var/lib/mysql
         environment:
-            MYSQL_DATABASE: test_db
-            MYSQL_USER: test
-            MYSQL_ROOT_PASSWORD: test
+            MYSQL_DATABASE: d2_db
+            MYSQL_USER: mysql_user
+            MYSQL_PASSWORD: mysql_user
+            MYSQL_ROOT_PASSWORD: mysql_root
             MYSQL_ROOT_HOST: '%'
+            MYSQL_USER_HOST: '%'
         ports:
             - "3306:3306"
 
@@ -20,4 +22,4 @@ services:
         ports:
             - "8080:8080"
         depends_on:
-            - mysql
+            - mysql_db
