@@ -18,23 +18,8 @@ FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 ARG DEPENDENCY=/workspace/app/target
 COPY --from=build ${DEPENDENCY} /app/lib
-# COPY --from=build ${DEPENDENCY}/dependency/BOOT-INF/lib /app/lib
-# COPY --from=build ${DEPENDENCY}/dependency/META-INF /app/META-INF
-# COPY --from=build ${DEPENDENCY}/dependency/BOOT-INF/classes /app
-# ENTRYPOINT ["java","-cp","app:app/lib/*","hello.Application"]
-
-
-# ARG DIR=/tmp/application
-# ARG DIR=/tmp/application
-
-# VOLUME ["./", "/tmp/application"]
-
-
-# RUN ["./mvnw", "clean", "package"]
-
-# ARG JAR_FILE=./target/*.jar
-# COPY ${JAR_FILE} /tmp/app.jar
-
-# EXPOSE 8080
-
+#COPY --from=build ${DEPENDENCY}/BOOT-INF/lib /app/lib
+#COPY --from=build ${DEPENDENCY}/META-INF /app/META-INF
+#COPY --from=build ${DEPENDENCY}/BOOT-INF/classes /app
+#ENTRYPOINT ["java","-cp","app:app/lib/*","D2SpringApplication"]
 ENTRYPOINT ["java","-jar","/app/lib/d2-spring-0.0.1.jar"]
