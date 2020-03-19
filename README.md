@@ -24,4 +24,7 @@ d2 clone 프로젝트 스터디
 1. cd ~/D2-clone-backend
 1. docker-compose up -d mysql
 1. localhost:3306으로 mysql 접근 ([MySQL Workbench](https://www.mysql.com/products/workbench/) )
-
+## rebuild
+ 
+1. mysql : docker-compose build mysql_db
+1. spring : docker-compose build spring
