@@ -37,4 +37,4 @@ d2 clone 프로젝트 스터디
 Swagger 2.0 
 
 ## 문서 확인
-http://localhost:8080/swagger-ui.html 로 
+http://localhost:8080/swagger-ui.html 로 접속 
