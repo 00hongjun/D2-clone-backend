@@ -22,4 +22,4 @@ COPY --from=build ${DEPENDENCY} /app/lib
 #COPY --from=build ${DEPENDENCY}/META-INF /app/META-INF
 #COPY --from=build ${DEPENDENCY}/BOOT-INF/classes /app
 #ENTRYPOINT ["java","-cp","app:app/lib/*","D2SpringApplication"]
-ENTRYPOINT ["java","-jar","/app/lib/d2-spring-0.0.1.jar", "--debug"]
+ENTRYPOINT ["java","-jar", "-Dspring.profiles.active=prod","/app/lib/d2-spring-0.0.1.jar", "--debug"]
