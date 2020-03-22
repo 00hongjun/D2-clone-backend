@@ -13,6 +13,7 @@ d2 clone 프로젝트 스터디
 * Redis
 * OAuth web token
 * Nginx
+* Swagger 2.0
 
 # Getting Started
 
@@ -31,3 +32,9 @@ d2 clone 프로젝트 스터디
 * spring
     1. cd ~/D2-clone-backend 
     1. docker-compose build spring
+    
+# RestAPI Docs
+Swagger 2.0 
+
+## 문서 확인
+http://localhost:8080/swagger-ui.html 로 
