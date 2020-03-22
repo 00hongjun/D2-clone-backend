@@ -1,17 +1,16 @@
-package com.study.d2spring.controller;
+package com.study.d2spring.controller.post;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import lombok.extern.slf4j.Slf4j;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@Slf4j
-@Api(value = "CommonController", description = "common api controller")
-public class CommonController {
+@RequiredArgsConstructor
+@Api(value = "PostController", description = "post api controller")
+public class PostController {
 
-    //API 정의
     //전체 게시물 (기술 게시물 + 뉴스 게시물)리
     @ApiOperation(value = "All Post List API")
     @GetMapping(value = "/")
@@ -31,19 +30,5 @@ public class CommonController {
     @GetMapping(value = "/news")
     public String news(){
         return "news";
-    }
-
-    //참여 프로그램
-    @ApiOperation(value = "Program URL List API")
-    @GetMapping(value = "/program")
-    public String program(){
-        return "program";
-    }
-
-    //일정 및 히스토리
-    @ApiOperation(value = "Schedule And History List API")
-    @GetMapping(value = "/about")
-    public String about(){
-        return "about";
     }
 }
