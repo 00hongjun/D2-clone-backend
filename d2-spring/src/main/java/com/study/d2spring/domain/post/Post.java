@@ -10,8 +10,8 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Getter
-@Table(name = "d2_post")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Table(name = "d2_post")
 @Entity
 public class Post {
 
