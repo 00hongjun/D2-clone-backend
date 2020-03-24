@@ -13,6 +13,7 @@ d2 clone 프로젝트 스터디
 * Redis
 * OAuth web token
 * Nginx
+* Swagger 2.0
 
 # Getting Started
 
@@ -22,6 +23,18 @@ d2 clone 프로젝트 스터디
 1. localhost:8080 으로 접속
 ## mysql 실행
 1. cd ~/D2-clone-backend
-1. docker-compose up -d mysql
+1. docker-compose up -d mysql_db
 1. localhost:3306으로 mysql 접근 ([MySQL Workbench](https://www.mysql.com/products/workbench/) )
+## rebuild
+* mysql
+    1. cd ~/D2-clone-backend 
+    1. docker-compose build mysql_db
+* spring
+    1. cd ~/D2-clone-backend 
+    1. docker-compose build spring
+    
+# RestAPI Docs
+Swagger 2.0 
 
+## 문서 확인
+http://localhost:8080/swagger-ui.html 로 접속 

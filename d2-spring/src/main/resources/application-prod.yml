@@ -3,19 +3,22 @@
 #    port: 8080
 #
 spring:
+    profiles:
+        active: prod
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/d2_db?charactorEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true&useSSL=false
+        url: jdbc:mysql://mysql_db:3306/d2_db?charactorEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true&useSSL=false
         username: mysql_user
         password: mysql_user
         validationQuery: "SELECT 1"
         testOnBorrow: true
         timeBetweenEvictionRunsMillis: 60000
 
+
+
     jpa:
-        show-sql: true
         hibernate:
-            ddl-auto: create
+            ddl-auto: update
             use-new-id-generator-mappings: false
             database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     properties:
