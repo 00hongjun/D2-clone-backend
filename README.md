@@ -32,9 +32,8 @@ d2 clone 프로젝트 스터디
 * spring
     1. cd ~/D2-clone-backend 
     1. docker-compose build spring
-    
-# RestAPI Docs
+## RestAPI Docs
 Swagger 2.0 
 
 ## 문서 확인
-http://localhost:8080/swagger-ui.html 로 접속 
+* http://localhost:8080/swagger-ui.html 로 접속 
