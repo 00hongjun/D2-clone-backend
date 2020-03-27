@@ -1,10 +1,12 @@
 package com.study.d2spring.domain.member;
 
+import com.study.d2spring.domain.image.Image;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -28,5 +30,8 @@ public class Member {
     private String profile;
     @Column(name = "member_image")
     private String image;
-
+    @OneToMany(mappedBy = "member")
+    private List<PostAndMember> postAndMember;
+    @OneToOne
+    private Image imageEntity;
 }

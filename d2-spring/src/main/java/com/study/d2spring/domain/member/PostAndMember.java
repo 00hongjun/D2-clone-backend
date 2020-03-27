@@ -12,12 +12,16 @@ import javax.persistence.*;
 @Entity
 public class PostAndMember {
 
-    @GeneratedValue
     @Id
+    @GeneratedValue
     @Column(name = "post_member_id")
-    private String id;
+    private long id;
     @Column(name = "post_member_post_id")
-    private String postId;
+    private long postId;
     @Column(name = "post_member_member_id")
-    private String memberId;
+    private long memberId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_id")
+    private Member member;
 }
