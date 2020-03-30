@@ -46,10 +46,6 @@ public class Post {
     @JoinColumn(name = "category_id")//외래키 (조인키가 member_id 가 됨)
     private Category category;
 
-    @ManyToOne(fetch = FetchType.LAZY)//xtoOne 에 대한 지연로딩 설정
-    @JoinColumn(name = "category_id")
-    private Category category;
-
     @ManyToMany(mappedBy = "posts")
     private List<Tag> tags = new ArrayList<>();
 
