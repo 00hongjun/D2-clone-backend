@@ -2,12 +2,14 @@ package com.study.d2spring.domain.post;
 
 
 import com.study.d2spring.domain.image.Image;
+import com.study.d2spring.domain.member.Posting;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -20,18 +22,24 @@ public class Post {
     @GeneratedValue
     @Column(name = "post_id")
     private long id;
-    private String postTitle;
-    private String postBody;
-    private LocalDateTime postPublicationDate;
-    private int postViewCount;
-    private long postcategory;
-    private String postSocialUrl;
 
-    //    @OneToOne(mappedBy = "postId")
-//    private PostAndMember postAndMember;
+    private String title;
+
+    private String body;
+
+    private LocalDateTime publicationDate;
+
+    private int viewCount;
+
+    private String socialUrl;
+
+    @OneToMany(mappedBy = "post")
+    private List<Posting> posting = new ArrayList<>();
+
     @OneToMany(mappedBy = "post")
     private List<Image> image;
-    @OneToOne
+
+    @OneToMany
     @JoinColumn(name = "category_id")
-    private Category category;
+    private List<Category> category = new ArrayList<>();
 }

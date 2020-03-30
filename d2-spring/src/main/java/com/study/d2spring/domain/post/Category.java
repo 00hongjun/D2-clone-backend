@@ -16,8 +16,8 @@ public class Category {
     @GeneratedValue
     @Column(name = "category_id")
     private long id;
-    @Column(name = "category_name")
+
     private String name;
-    @Column(name = "category_url")
+
     private String url;
 }
