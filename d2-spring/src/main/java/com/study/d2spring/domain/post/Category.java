@@ -20,8 +20,15 @@ public class Category {
     private long id;
 
     private String name;
-    private String url;
 
     @OneToMany
     private List<Post> posts = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "id=" + id +
+                ", name='" + name +
+                '}';
+    }
 }

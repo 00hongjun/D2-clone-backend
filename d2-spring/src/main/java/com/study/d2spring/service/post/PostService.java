@@ -5,6 +5,8 @@ import com.study.d2spring.repository.post.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class PostService {
@@ -19,5 +21,9 @@ public class PostService {
 
     public Post findPostId(Long id){
         return null;
+    }
+
+    public List<Post> findAll(){
+        return postRepository.findAll();
     }
 }

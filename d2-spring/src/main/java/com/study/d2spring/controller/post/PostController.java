@@ -1,20 +1,31 @@
 package com.study.d2spring.controller.post;
 
+import com.study.d2spring.domain.post.Post;
+import com.study.d2spring.service.post.PostService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @Api(value = "PostController", description = "post api controller")
 public class PostController {
+    private final PostService postService;
 
     //전체 게시물 (기술 게시물 + 뉴스 게시물)리
     @ApiOperation(value = "All Post List API")
     @GetMapping(value = "/")
     public String home(){
+        List<Post> posts = postService.findAll();
+
+        for (int i = 0; i < posts.size(); i++){
+            System.out.println(posts.get(i).toString());
+        }
+
         return "home";
     }
 

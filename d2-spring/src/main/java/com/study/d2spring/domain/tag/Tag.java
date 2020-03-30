@@ -29,7 +29,7 @@ public class Tag {
     //JoinColums은 JoinTable에 존재하는 카테코리 테이블 연결 컬럼을 의미함.
     //InverseJoinColums은 tag 테이블과 연결할 JoinTable에 존재하는 컬럼을 의미함.
     @ManyToMany
-    @JoinTable(name = "tag_post",
+    @JoinTable(name = "d2_tag_post",
             joinColumns = @JoinColumn(name = "tag_id"),
             inverseJoinColumns = @JoinColumn(name = "post_id"))
     private List<Post> posts = new ArrayList<>();

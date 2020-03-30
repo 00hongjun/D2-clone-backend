@@ -29,11 +29,11 @@ public class Post {
 
     private String body;
 
-    private LocalDateTime publicationDate;
+    private LocalDateTime publication_date;
 
-    private int viewCount;
+    private int view_count;
 
-    private String socialUrl;
+    private String social_url;
 
     @OneToMany(mappedBy = "post")
     private List<Posting> posting = new ArrayList<>();
@@ -41,13 +41,27 @@ public class Post {
     @OneToMany(mappedBy = "post")
     private List<Image> image;
 
-    @OneToMany
-    @JoinColumn(name = "category_id")
-    private List<Category> categories = new ArrayList<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)//xtoOne 에 대한 지연로딩 설정
+    @JoinColumn(name = "category_id")//외래키 (조인키가 member_id 가 됨)
+    private Category category;
 
     @ManyToMany(mappedBy = "posts")
     private List<Tag> tags = new ArrayList<>();
 
     @OneToMany(mappedBy = "post")
     private List<Reply> replies = new ArrayList<>();
+
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", body='" + body + '\'' +
+                ", publication_date=" + publication_date +
+                ", view_count=" + view_count +
+                ", social_url='" + social_url + '\'' +
+                '}';
+    }
 }
