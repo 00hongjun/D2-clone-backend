@@ -18,7 +18,6 @@ public class Image {
     @Column(name = "image_id")
     private long id;
 
-    @Column(name = "image_path")
     private String path;
 
     @ManyToOne(fetch = FetchType.LAZY)
