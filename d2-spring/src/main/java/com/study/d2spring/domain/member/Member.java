@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -17,21 +18,20 @@ public class Member {
     @Id
     @Column(name = "member_id")
     private String id;
-    @Column(name = "member_name")
+
     private String name;
-    @Column(name = "member_email")
+
     private String email;
-    @Column(name = "member_department")
+
     @Enumerated(EnumType.STRING)
     private department department;
-    @Column(name = "member_position")
-    private String position;
-    @Column(name = "member_profile")
+
     private String profile;
-    @Column(name = "member_image")
-    private String image;
+
     @OneToMany(mappedBy = "member")
-    private List<PostAndMember> postAndMember;
-    @OneToOne
-    private Image imageEntity;
+    private List<Posting> posting = new ArrayList<>();
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_image_id")
+    private Image Image;
 }
