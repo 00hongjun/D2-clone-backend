@@ -3,6 +3,8 @@ package com.study.d2spring.domain.post;
 
 import com.study.d2spring.domain.image.Image;
 import com.study.d2spring.domain.member.Posting;
+import com.study.d2spring.domain.reply.Reply;
+import com.study.d2spring.domain.tag.Tag;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -39,7 +41,14 @@ public class Post {
     @OneToMany(mappedBy = "post")
     private List<Image> image;
 
-    @OneToMany
+
+    @ManyToOne(fetch = FetchType.LAZY)//xtoOne 에 대한 지연로딩 설정
     @JoinColumn(name = "category_id")
-    private List<Category> category = new ArrayList<>();
+    private Category category;
+
+    @ManyToMany(mappedBy = "posts")
+    private List<Tag> tags = new ArrayList<>();
+
+    @OneToMany(mappedBy = "post")
+    private List<Reply> replies = new ArrayList<>();
 }

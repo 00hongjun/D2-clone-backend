@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -18,6 +20,8 @@ public class Category {
     private long id;
 
     private String name;
-
     private String url;
+
+    @OneToMany
+    private List<Post> posts = new ArrayList<>();
 }
