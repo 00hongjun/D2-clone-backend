@@ -3,6 +3,8 @@ package com.study.d2spring.domain.post;
 
 import com.study.d2spring.domain.image.Image;
 import com.study.d2spring.domain.member.Posting;
+import com.study.d2spring.domain.reply.Reply;
+import com.study.d2spring.domain.tag.Tag;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -41,5 +43,11 @@ public class Post {
 
     @OneToMany
     @JoinColumn(name = "category_id")
-    private List<Category> category = new ArrayList<>();
+    private List<Category> categories = new ArrayList<>();
+
+    @ManyToMany(mappedBy = "posts")
+    private List<Tag> tags = new ArrayList<>();
+
+    @OneToMany(mappedBy = "post")
+    private List<Reply> replies = new ArrayList<>();
 }

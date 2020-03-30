@@ -29,5 +29,6 @@ public class Reply {
     private String comments;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private List<Post> posts = new ArrayList<>();
+    @JoinColumn(name = "post_id")
+    private Post post;
 }
