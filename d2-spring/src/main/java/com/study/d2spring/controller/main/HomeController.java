@@ -1,25 +1,24 @@
-package com.study.d2spring.controller.post;
+package com.study.d2spring.controller.main;
 
 import com.study.d2spring.view.home.HomeView;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
+import org.springframework.web.servlet.mvc.condition.RequestConditionHolder;
 
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
-public class PostController {
+public class HomeController {
 
-    @GetMapping("/helloworld/{id}")
-    public HomeView helloWorld(@PathVariable long id) {
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        return new HomeView(request.getRequestURI());
-    }
-
-    @GetMapping("/news/{id}")
-    public HomeView news(@PathVariable long id) {
+    /**
+     * https://d2.naver.com/home
+     */
+    @ApiOperation(value = "All Post List API") //전체 게시물 (기술 게시물 + 뉴스 게시물)리
+    @GetMapping(value = {"/", "/home"})
+    public HomeView home() {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         return new HomeView(request.getRequestURI());
     }
