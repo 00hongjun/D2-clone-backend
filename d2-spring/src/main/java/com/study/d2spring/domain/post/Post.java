@@ -2,6 +2,7 @@ package com.study.d2spring.domain.post;
 
 
 import com.study.d2spring.domain.image.Image;
+import com.study.d2spring.domain.member.Member;
 import com.study.d2spring.domain.member.Posting;
 import com.study.d2spring.domain.reply.Reply;
 import com.study.d2spring.domain.tag.Tag;
@@ -27,6 +28,7 @@ public class Post {
 
     private String title;
 
+    @Column(columnDefinition = "LONGTEXT")
     private String body;
 
     private LocalDateTime publication_date;
@@ -52,6 +54,16 @@ public class Post {
     @OneToMany(mappedBy = "post")
     private List<Reply> replies = new ArrayList<>();
 
+    //연관관계 메소드
+    public void setCategory(Category category){
+        this.category = category;
+        category.getPosts().add(this);
+    }
+
+    public void addPosting(Posting posting){
+        this.posting.add(posting);
+        posting.setPost(this);
+    }
 
     @Override
     public String toString() {
@@ -62,6 +74,8 @@ public class Post {
                 ", publication_date=" + publication_date +
                 ", view_count=" + view_count +
                 ", social_url='" + social_url + '\'' +
-                '}';
+                "},"+
+                this.category.toString();
+
     }
 }

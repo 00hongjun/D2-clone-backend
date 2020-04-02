@@ -23,15 +23,29 @@ public class Member {
 
     private String email;
 
-    @Enumerated(EnumType.STRING)
-    private department department;
+//    @Enumerated(EnumType.STRING)
+    private String department;
+
+    private String position;
 
     private String profile;
+
+    private String avatarUrl;
 
     @OneToMany(mappedBy = "member")
     private List<Posting> posting = new ArrayList<>();
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "member_image_id")
-    private Image Image;
+    @Override
+    public String toString() {
+        return "Member{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", department=" + department +
+                ", position='" + position + '\'' +
+                ", profile='" + profile + '\'' +
+                ", avatarUrl='" + avatarUrl + '\'' +
+                ", posting=" + posting +
+                '}';
+    }
 }

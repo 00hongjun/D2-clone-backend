@@ -2,7 +2,13 @@ package com.study.d2spring.view.post;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.study.d2spring.domain.member.Member;
+import com.study.d2spring.domain.post.Category;
+import com.study.d2spring.domain.post.Post;
 
+import javax.servlet.http.HttpServletRequest;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
@@ -12,23 +18,29 @@ public class PostView {
     private String postTitle;
     private String postImage;
     private String postHtml;
-    private String postPublishedAt;
+    private LocalDateTime postPublishedAt;
     private String url;
-    private String viewCount;
-    private String author;
-    private String id;
-    private String categoryId;
+    private int viewCount;
+    private Long categoryId;
     private String categoryName;
     private String socialUrl;
     private List<PostTags> postTags;
-    private List<Authors> authors;
+    private List<Author> authors = new ArrayList<>();
+
+    public PostView(HttpServletRequest request) {
+
+        setPostData((Post) request.getAttribute("post"));
+
+//        setAuthors((List<Member>) request.getAttribute("members"));
+
+    }
 
     class PostTags {
         private String name;
         private String url;
     }
 
-    class Authors {
+    class Author {
         private String id;
         private String name;
         private String email;
@@ -39,8 +51,38 @@ public class PostView {
 
     }
 
-    public PostView() {
 
+    private void setCategory(Category _category){
+        this.categoryId = _category.getId();
+        this.categoryName = _category.getName();
+
+    }
+
+    private void setAuthors(List<Member> _members){
+//        _members.get(0).toString();
+        for (int i = 0; i < _members.size(); i++) {
+            Author author = new Author();
+            author.id = _members.get(i).getId();
+            author.name = _members.get(i).getName();
+            author.email = _members.get(i).getEmail();
+            author.department = _members.get(i).getDepartment();
+            author.position = _members.get(i).getPosition();
+            author.profile = _members.get(i).getProfile();
+            author.avatarUrl = _members.get(i).getAvatarUrl();
+
+            authors.add(author);
+        }
+    }
+
+    private void setPostData(Post _post){
+        this.postTitle = _post.getTitle();
+//        this.postImage = _post.getImage();
+        this.postHtml = _post.getBody();
+        this.postPublishedAt = _post.getPublication_date();
+        this.url = _post.getSocial_url();
+        this.viewCount = _post.getView_count();
+
+        setCategory(_post.getCategory());
     }
 
     /**

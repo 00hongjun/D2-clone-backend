@@ -20,7 +20,7 @@ public class PostService {
     }
 
     public Post findPostId(Long id){
-        return null;
+        return postRepository.findOne(id);
     }
 
     public List<Post> findAll(){

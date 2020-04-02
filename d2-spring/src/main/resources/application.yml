@@ -11,6 +11,7 @@ spring:
         validationQuery: "SELECT 1"
         testOnBorrow: true
         timeBetweenEvictionRunsMillis: 60000
+        sql-script-encoding: UTF-8
 
     jpa:
         show-sql: true

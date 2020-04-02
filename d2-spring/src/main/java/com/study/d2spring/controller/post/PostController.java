@@ -1,8 +1,11 @@
 package com.study.d2spring.controller.post;
 
+import com.study.d2spring.domain.member.Member;
+import com.study.d2spring.service.member.MemberService;
 import com.study.d2spring.view.home.HomeView;
 import com.study.d2spring.domain.post.Post;
 import com.study.d2spring.service.post.PostService;
+import com.study.d2spring.view.post.PostView;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
@@ -13,6 +16,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.swing.plaf.metal.MetalMenuBarUI;
 
 import java.util.List;
 
@@ -21,20 +25,29 @@ import java.util.List;
 @Api(value = "PostController", description = "post api controller")
 public class PostController {
     private final PostService postService;
+    private final MemberService memberService;
 
     //카테고리 1 (기술 게시물)
     @ApiOperation(value = "Category 1 (Helloworld)  Post List API")
     @GetMapping("/helloworld/{id}")
-    public HomeView helloWorld(@PathVariable long id) {
-
-        List<Post> posts = postService.findAll();
-
-        for (int i = 0; i < posts.size(); i++){
-            System.out.println(posts.get(i).toString());
-        }
+    public PostView helloWorld(@PathVariable long id) {
 
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        return new HomeView(request.getRequestURI());
+
+        Post post = postService.findPostId(id);
+
+        System.out.println(post.toString());
+
+        List<Member> members = memberService.findAllByPostId(id);
+//
+        for (int i = 0; i < members.size() ; i++) {
+            System.out.println(members.get(i).toString());
+        }
+//
+        request.setAttribute("post", post);
+        request.setAttribute("members", members);
+
+        return new PostView(request);
     }
 
     @ApiOperation(value = "Category 2 (news) Post List API")

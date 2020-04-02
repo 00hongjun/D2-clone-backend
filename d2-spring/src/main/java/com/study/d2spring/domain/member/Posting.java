@@ -25,4 +25,22 @@ public class Posting {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "posting_member_id")
     private Member member;
+
+    public void setPost(Post post) {
+        this.post = post;
+    }
+
+    public void setMember(Member member) {
+        this.member = member;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Posting{" +
+                "id=" + id +
+                ", post=" + post.toString() +
+//                ", member=" + member.toString() +
+                '}';
+    }
 }
