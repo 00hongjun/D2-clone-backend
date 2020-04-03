@@ -13,8 +13,8 @@ public class PostService {
 
     private final PostRepository postRepository;
 
-    public Post findPostId(Long _postId){
-        return postRepository.findOne(_postId);
+    public Post findPostIdByCategory(Long _postId, Long _categoryId){
+        return postRepository.findOneByCategory(_postId, _categoryId);
     }
 
     public List<Post> findAll(){

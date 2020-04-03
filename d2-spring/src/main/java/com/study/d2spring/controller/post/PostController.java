@@ -30,20 +30,22 @@ public class PostController {
     private final TagService tagService;
 
     //카테고리 1 (기술 게시물)
-    @ApiOperation(value = "Category 1 (Helloworld)  Post List API")
+    @ApiOperation(value = "Category 2 (Helloworld)  Post List API")
     @GetMapping("/helloworld/{id}")
     public PostView helloWorld(@PathVariable long id) {
-
-        Post post = postService.findPostId(id);
+        Post post = postService.findPostIdByCategory(id, new Long(2));
         List<Member> members = memberService.findByPostId(id);
 
         return new PostView(post, members);
     }
 
-    @ApiOperation(value = "Category 2 (news) Post List API")
+    @ApiOperation(value = "Category 3 (news) Post List API")
     @GetMapping("/news/{id}")
-    public HomeView news(@PathVariable long id) {
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        return new HomeView(request.getRequestURI());
+    public PostView news(@PathVariable long id) {
+        Post post = postService.findPostIdByCategory(id, new Long(3));
+
+        List<Member> members = memberService.findByPostId(id);
+
+        return new PostView(post, members);
     }
 }

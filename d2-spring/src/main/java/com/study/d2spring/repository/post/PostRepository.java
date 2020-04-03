@@ -42,7 +42,7 @@ public class PostRepository {
         return posts;
     }
 
-    public Post findOne(Long _postId){
+    public Post findOneByCategory(Long _postId, Long _categoryId){
         EntityManager em = emf.createEntityManager();
         JPAQuery query = new JPAQuery(em);
 
@@ -52,9 +52,10 @@ public class PostRepository {
         Post post = query.from(qPost, qCategory)
                 .innerJoin(qPost.category, qCategory)
                 .innerJoin(qPost.category, qCategory)
-                .where(qPost.id.eq(_postId))
+                .where(qPost.id.eq(_postId).and(qCategory.id.eq(_categoryId)))
                 .uniqueResult(qPost);
 
         return post;
     }
+
 }
