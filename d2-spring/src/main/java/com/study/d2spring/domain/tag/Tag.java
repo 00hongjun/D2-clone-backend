@@ -1,5 +1,6 @@
 package com.study.d2spring.domain.tag;
 
+import com.study.d2spring.domain.member.Posting;
 import com.study.d2spring.domain.post.Post;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -33,4 +34,13 @@ public class Tag {
             joinColumns = @JoinColumn(name = "tag_id"),
             inverseJoinColumns = @JoinColumn(name = "post_id"))
     private List<Post> posts = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "Tag{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", url='" + url + '\'' +
+                '}';
+    }
 }

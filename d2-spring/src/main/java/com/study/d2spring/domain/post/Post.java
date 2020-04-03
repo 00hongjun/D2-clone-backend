@@ -1,8 +1,6 @@
 package com.study.d2spring.domain.post;
 
 
-import com.study.d2spring.domain.image.Image;
-import com.study.d2spring.domain.member.Member;
 import com.study.d2spring.domain.member.Posting;
 import com.study.d2spring.domain.reply.Reply;
 import com.study.d2spring.domain.tag.Tag;
@@ -31,6 +29,8 @@ public class Post {
     @Column(columnDefinition = "LONGTEXT")
     private String body;
 
+    private String image;
+
     private LocalDateTime publication_date;
 
     private int view_count;
@@ -40,12 +40,8 @@ public class Post {
     @OneToMany(mappedBy = "post")
     private List<Posting> posting = new ArrayList<>();
 
-    @OneToMany(mappedBy = "post")
-    private List<Image> image;
-
-
     @ManyToOne(fetch = FetchType.LAZY)//xtoOne 에 대한 지연로딩 설정
-    @JoinColumn(name = "category_id")//외래키 (조인키가 member_id 가 됨)
+    @JoinColumn(name = "category_id")//외래키 (조인키가 category_id 가 됨)
     private Category category;
 
     @ManyToMany(mappedBy = "posts")
@@ -53,6 +49,7 @@ public class Post {
 
     @OneToMany(mappedBy = "post")
     private List<Reply> replies = new ArrayList<>();
+
 
     //연관관계 메소드
     public void setCategory(Category category){
@@ -72,11 +69,11 @@ public class Post {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", body='" + body + '\'' +
+                ", image=" + image +
                 ", publication_date=" + publication_date +
                 ", view_count=" + view_count +
                 ", social_url='" + social_url + '\'' +
                 ", posting=" + posting +
-                ", image=" + image +
                 ", category=" + category +
                 ", tags=" + tags +
                 ", replies=" + replies +

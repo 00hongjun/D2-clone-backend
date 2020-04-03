@@ -23,10 +23,8 @@ import java.util.List;
 public class PostRepository {
 //
     @Autowired
-    private final EntityManager em;
     private final EntityManagerFactory emf;
-//
-//    public void save(Post post) { em.persist(post); }
+    private final EntityManager em;
 
     public List<Post> findAll(){
         EntityManager em = emf.createEntityManager();
@@ -44,7 +42,19 @@ public class PostRepository {
         return posts;
     }
 
-    public Post findOne(Long id){
-        return em.find(Post.class, id);
+    public Post findOne(Long _postId){
+        EntityManager em = emf.createEntityManager();
+        JPAQuery query = new JPAQuery(em);
+
+        QPost qPost = QPost.post;
+        QCategory qCategory = QCategory.category;
+
+        Post post = query.from(qPost, qCategory)
+                .innerJoin(qPost.category, qCategory)
+                .innerJoin(qPost.category, qCategory)
+                .where(qPost.id.eq(_postId))
+                .uniqueResult(qPost);
+
+        return post;
     }
 }

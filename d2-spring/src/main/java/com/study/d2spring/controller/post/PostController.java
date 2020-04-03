@@ -1,7 +1,9 @@
 package com.study.d2spring.controller.post;
 
 import com.study.d2spring.domain.member.Member;
+import com.study.d2spring.domain.tag.Tag;
 import com.study.d2spring.service.member.MemberService;
+import com.study.d2spring.service.tag.TagService;
 import com.study.d2spring.view.home.HomeView;
 import com.study.d2spring.domain.post.Post;
 import com.study.d2spring.service.post.PostService;
@@ -16,7 +18,6 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.swing.plaf.metal.MetalMenuBarUI;
 
 import java.util.List;
 
@@ -26,24 +27,15 @@ import java.util.List;
 public class PostController {
     private final PostService postService;
     private final MemberService memberService;
+    private final TagService tagService;
 
     //카테고리 1 (기술 게시물)
     @ApiOperation(value = "Category 1 (Helloworld)  Post List API")
     @GetMapping("/helloworld/{id}")
     public PostView helloWorld(@PathVariable long id) {
 
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-
         Post post = postService.findPostId(id);
-
-//        System.out.println(post.toString());
-
-        List<Member> members = memberService.findAllByPostId(id);
-//
-//        for (int i = 0; i < members.size() ; i++) {
-//            System.out.println(members.get(i).toString());
-//        }
-//
+        List<Member> members = memberService.findByPostId(id);
 
         return new PostView(post, members);
     }

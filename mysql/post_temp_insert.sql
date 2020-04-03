@@ -1,3 +1,5 @@
+use d2_db;
+
 INSERT INTO `d2_db`.`d2_category`
 (`category_id`,
 `name`)
@@ -22,6 +24,7 @@ VALUES
 INSERT INTO `d2_db`.`d2_post`
 (`post_id`,
 `body`,
+`image`,
 `publication_date`,
 `social_url`,
 `title`,
@@ -30,6 +33,7 @@ INSERT INTO `d2_db`.`d2_post`
 VALUES
 (668,
 "<p> 아키텍처는 오랫동안 많은 개발자들이 좋아하며 사용한 아키텍처입니다. </p>",
+"/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
 now(),
 "http://d2.naver.com/helloworld/6080222",
 "이것은 제목이다",
@@ -61,17 +65,111 @@ VALUES
 (1,
 258,
 668);
+INSERT INTO `d2_db`.`d2_tag`
+(
+`name`,
+`url`)
+VALUES
+(
+"rpc",
+"/search?keyword=rpc");
+
+INSERT INTO `d2_db`.`d2_tag`
+(
+`name`,
+`url`)
+VALUES
+(
+"Spring",
+"/search?keyword=Spring");
+
+INSERT INTO `d2_db`.`d2_tag`
+(
+`name`,
+`url`)
+VALUES
+(
+"Spring WebFlux",
+"/search?keyword=Spring WebFlux");
+
+INSERT INTO `d2_db`.`d2_tag`
+(
+`name`,
+`url`)
+VALUES
+(
+"Armeria",
+"/search?keyword=Armeria");
+
+INSERT INTO `d2_db`.`d2_tag`
+(
+`name`,
+`url`)
+VALUES
+(
+"Microservice",
+"/search?keyword=Microservice");
+
+
+INSERT INTO `d2_db`.`d2_tag`
+(
+`name`,
+`url`)
+VALUES
+(
+"Reactive",
+"/search?keyword=Reactive");
+
+INSERT INTO `d2_db`.`d2_tag_post`
+(`tag_id`,
+`post_id`)
+VALUES
+(1,
+668);
+
+INSERT INTO `d2_db`.`d2_tag_post`
+(`tag_id`,
+`post_id`)
+VALUES
+(2,
+668);
+
+INSERT INTO `d2_db`.`d2_tag_post`
+(`tag_id`,
+`post_id`)
+VALUES
+(3,
+668);
+
+INSERT INTO `d2_db`.`d2_tag_post`
+(`tag_id`,
+`post_id`)
+VALUES
+(3,
+668);
+
+INSERT INTO `d2_db`.`d2_tag_post`
+(`tag_id`,
+`post_id`)
+VALUES
+(4,
+668);
+
+INSERT INTO `d2_db`.`d2_tag_post`
+(`tag_id`,
+`post_id`)
+VALUES
+(5,
+668);
+
+INSERT INTO `d2_db`.`d2_tag_post`
+(`tag_id`,
+`post_id`)
+VALUES
+(6,
+668);
 
 select * from d2_category, d2_member, d2_post,d2_posting
 where d2_category.category_id = d2_post.category_id
 and d2_member.member_id = d2_posting.posting_member_id
 and d2_post.post_id = d2_posting.posting_post_id;
-
-
-
-
-
-
-
-
-

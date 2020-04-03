@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.study.d2spring.domain.member.Member;
 import com.study.d2spring.domain.post.Category;
 import com.study.d2spring.domain.post.Post;
+import com.study.d2spring.domain.tag.Tag;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
@@ -24,23 +25,18 @@ public class PostView {
     private Long categoryId;
     private String categoryName;
     private String socialUrl;
-    private List<PostTags> postTags;
+    private List<String> author = new ArrayList<>();
+    private List<PostTag> postTags = new ArrayList<>();
     private List<Author> authors = new ArrayList<>();
 
-//    public PostView(HttpServletRequest request) {
-//
-//        setPostData((Post) request.getAttribute("post"));
-//
-//        setAuthors((List<Member>) request.getAttribute("members"));
-//
-//    }
-
-    public PostView(Post post, List<Member> member) {
-        setPostData(post);
-        setAuthors(member);
+    public PostView(Post _post, List<Member> _members) {
+        setPostData(_post);
+        setAuthors(_members);
     }
 
-    class PostTags {
+    @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    class PostTag {
         private String name;
         private String url;
     }
@@ -48,6 +44,7 @@ public class PostView {
     @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     class Author {
+
         private String id;
         private String name;
         private String email;
@@ -58,15 +55,25 @@ public class PostView {
 
     }
 
-
     private void setCategory(Category _category) {
+
         this.categoryId = _category.getId();
         this.categoryName = _category.getName();
 
     }
 
+    private void setPostTags(List<Tag> _tags) {
+
+        for (int i = 0; i < _tags.size(); i++) {
+            PostTag tag = new PostTag();
+            tag.name = _tags.get(i).getName();
+            tag.url = _tags.get(i).getUrl();
+
+            this.postTags.add(tag);
+        }
+    }
+
     private void setAuthors(List<Member> _members) {
-//        _members.get(0).toString();
         for (int i = 0; i < _members.size(); i++) {
             Author author = new Author();
             author.id = _members.get(i).getId();
@@ -77,19 +84,21 @@ public class PostView {
             author.profile = _members.get(i).getProfile();
             author.avatarUrl = _members.get(i).getAvatarUrl();
 
-            authors.add(author);
+            this.authors.add(author);
+            this.author.add(author.id);
         }
     }
 
     private void setPostData(Post _post) {
         this.postTitle = _post.getTitle();
-//        this.postImage = _post.getImage();
         this.postHtml = _post.getBody();
+        this.postImage = _post.getImage();
         this.postPublishedAt = _post.getPublication_date();
         this.url = _post.getSocial_url();
         this.viewCount = _post.getView_count();
 
         setCategory(_post.getCategory());
+        setPostTags(_post.getTags());
     }
 
     /**

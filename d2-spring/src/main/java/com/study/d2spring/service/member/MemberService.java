@@ -13,7 +13,7 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    public List<Member> findAllByPostId(Long postId){
-        return memberRepository.findAllbyPostId(postId);
+    public List<Member> findByPostId(Long postId){
+        return memberRepository.findbyPostId(postId);
     }
 }

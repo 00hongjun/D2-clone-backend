@@ -33,14 +33,4 @@ public class Posting {
     public void setMember(Member member) {
         this.member = member;
     }
-
-
-    @Override
-    public String toString() {
-        return "Posting{" +
-                "id=" + id +
-                ", post=" + post +
-                ", member=" + member +
-                '}';
-    }
 }

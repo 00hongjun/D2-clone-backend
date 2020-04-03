@@ -13,14 +13,8 @@ public class PostService {
 
     private final PostRepository postRepository;
 
-    public Long addPost(Post post){
-        //임의의 게시물 데이터를 삽입
-        return null;
-//        return post.getId();
-    }
-
-    public Post findPostId(Long id){
-        return postRepository.findOne(id);
+    public Post findPostId(Long _postId){
+        return postRepository.findOne(_postId);
     }
 
     public List<Post> findAll(){

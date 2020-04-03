@@ -1,10 +1,12 @@
-package com.study.d2spring.repository.member;
+package com.study.d2spring.repository.tag;
 
 import com.mysema.query.jpa.impl.JPAQuery;
 import com.study.d2spring.domain.member.Member;
-import com.study.d2spring.domain.member.Posting;
 import com.study.d2spring.domain.member.QMember;
 import com.study.d2spring.domain.member.QPosting;
+import com.study.d2spring.domain.post.QPost;
+import com.study.d2spring.domain.tag.QTag;
+import com.study.d2spring.domain.tag.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -15,27 +17,26 @@ import java.util.List;
 
 @Repository
 @RequiredArgsConstructor
-public class MemberRepository {
+public class TagRepository {
 
     @Autowired
     private final EntityManagerFactory emf;
     private EntityManager em;
 
-    public List<Member> findbyPostId(Long _postId){
+    public List<Tag> fingByPostId(Long _postId){
         em = emf.createEntityManager();
+
         JPAQuery query = new JPAQuery(em);
 
-        QPosting qPosting = QPosting.posting;
-        QMember qMember = QMember.member;
+        QTag qTag = QTag.tag;
+        QPost qPost = QPost.post;
 
-        List<Member> members = query.from(qMember, qPosting)
-                .innerJoin(qMember.posting, qPosting)
-                .where(qPosting.post.id.eq(_postId))
-                .list(qMember);
+        List<Tag> tags = query.from(qTag, qPost)
+                .innerJoin(qTag.posts, qPost)
+                .where(qPost.post.id.eq(_postId))
+                .list(qTag);
 
-//        System.out.println(members.get(0).toString());
-
-        return members;
-
+        return tags;
     }
+
 }

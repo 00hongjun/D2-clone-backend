@@ -1,6 +1,5 @@
 package com.study.d2spring.domain.member;
 
-import com.study.d2spring.domain.image.Image;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -44,8 +43,7 @@ public class Member {
                 ", department='" + department + '\'' +
                 ", position='" + position + '\'' +
                 ", profile='" + profile + '\'' +
-                ", avatarUrl='" + avatarUrl + '\'' +
-                ", posting=" + posting +
+                ", avatarUrl='" + avatarUrl + '\''+
                 '}';
     }
 }
