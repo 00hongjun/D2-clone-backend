@@ -41,7 +41,7 @@ public class Member {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", department=" + department +
+                ", department='" + department + '\'' +
                 ", position='" + position + '\'' +
                 ", profile='" + profile + '\'' +
                 ", avatarUrl='" + avatarUrl + '\'' +

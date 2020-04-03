@@ -39,8 +39,8 @@ public class Posting {
     public String toString() {
         return "Posting{" +
                 "id=" + id +
-                ", post=" + post.toString() +
-//                ", member=" + member.toString() +
+                ", post=" + post +
+                ", member=" + member +
                 '}';
     }
 }

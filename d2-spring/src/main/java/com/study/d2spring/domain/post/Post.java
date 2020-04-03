@@ -65,6 +65,7 @@ public class Post {
         posting.setPost(this);
     }
 
+
     @Override
     public String toString() {
         return "Post{" +
@@ -74,8 +75,11 @@ public class Post {
                 ", publication_date=" + publication_date +
                 ", view_count=" + view_count +
                 ", social_url='" + social_url + '\'' +
-                "},"+
-                this.category.toString();
-
+                ", posting=" + posting +
+                ", image=" + image +
+                ", category=" + category +
+                ", tags=" + tags +
+                ", replies=" + replies +
+                '}';
     }
 }

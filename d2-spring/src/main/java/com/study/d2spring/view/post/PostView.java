@@ -27,12 +27,17 @@ public class PostView {
     private List<PostTags> postTags;
     private List<Author> authors = new ArrayList<>();
 
-    public PostView(HttpServletRequest request) {
-
-        setPostData((Post) request.getAttribute("post"));
-
+//    public PostView(HttpServletRequest request) {
+//
+//        setPostData((Post) request.getAttribute("post"));
+//
 //        setAuthors((List<Member>) request.getAttribute("members"));
+//
+//    }
 
+    public PostView(Post post, List<Member> member) {
+        setPostData(post);
+        setAuthors(member);
     }
 
     class PostTags {
@@ -40,6 +45,8 @@ public class PostView {
         private String url;
     }
 
+    @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     class Author {
         private String id;
         private String name;
@@ -52,13 +59,13 @@ public class PostView {
     }
 
 
-    private void setCategory(Category _category){
+    private void setCategory(Category _category) {
         this.categoryId = _category.getId();
         this.categoryName = _category.getName();
 
     }
 
-    private void setAuthors(List<Member> _members){
+    private void setAuthors(List<Member> _members) {
 //        _members.get(0).toString();
         for (int i = 0; i < _members.size(); i++) {
             Author author = new Author();
@@ -74,7 +81,7 @@ public class PostView {
         }
     }
 
-    private void setPostData(Post _post){
+    private void setPostData(Post _post) {
         this.postTitle = _post.getTitle();
 //        this.postImage = _post.getImage();
         this.postHtml = _post.getBody();

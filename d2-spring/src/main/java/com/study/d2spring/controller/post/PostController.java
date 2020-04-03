@@ -36,18 +36,16 @@ public class PostController {
 
         Post post = postService.findPostId(id);
 
-        System.out.println(post.toString());
+//        System.out.println(post.toString());
 
         List<Member> members = memberService.findAllByPostId(id);
 //
-        for (int i = 0; i < members.size() ; i++) {
-            System.out.println(members.get(i).toString());
-        }
+//        for (int i = 0; i < members.size() ; i++) {
+//            System.out.println(members.get(i).toString());
+//        }
 //
-        request.setAttribute("post", post);
-        request.setAttribute("members", members);
 
-        return new PostView(request);
+        return new PostView(post, members);
     }
 
     @ApiOperation(value = "Category 2 (news) Post List API")
