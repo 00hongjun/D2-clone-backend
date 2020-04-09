@@ -31,13 +31,13 @@ public class Post {
 
     private String image;
 
-    private LocalDateTime publication_date;
+    private LocalDateTime publicationDate;
 
-    private int view_count;
+    private int viewCount;
 
-    private String social_url;
+    private String socialUrl;
 
-    @OneToMany(mappedBy = "post")
+    @OneToMany(mappedBy = "post", fetch = FetchType.LAZY)
     private List<Posting> posting = new ArrayList<>();
 
     @ManyToOne(fetch = FetchType.LAZY)//xtoOne 에 대한 지연로딩 설정
@@ -52,12 +52,12 @@ public class Post {
 
 
     //연관관계 메소드
-    public void setCategory(Category category){
+    public void setCategory(Category category) {
         this.category = category;
         category.getPosts().add(this);
     }
 
-    public void addPosting(Posting posting){
+    public void addPosting(Posting posting) {
         this.posting.add(posting);
         posting.setPost(this);
     }
@@ -70,10 +70,9 @@ public class Post {
                 ", title='" + title + '\'' +
                 ", body='" + body + '\'' +
                 ", image=" + image +
-                ", publication_date=" + publication_date +
-                ", view_count=" + view_count +
-                ", social_url='" + social_url + '\'' +
-                ", posting=" + posting +
+                ", publication_date=" + publicationDate +
+                ", view_count=" + viewCount +
+                ", social_url='" + socialUrl + '\'' +
                 ", category=" + category +
                 ", tags=" + tags +
                 ", replies=" + replies +

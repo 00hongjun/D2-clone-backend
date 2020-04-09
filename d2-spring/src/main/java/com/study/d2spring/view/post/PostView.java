@@ -7,7 +7,6 @@ import com.study.d2spring.domain.post.Category;
 import com.study.d2spring.domain.post.Post;
 import com.study.d2spring.domain.tag.Tag;
 
-import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -93,9 +92,9 @@ public class PostView {
         this.postTitle = _post.getTitle();
         this.postHtml = _post.getBody();
         this.postImage = _post.getImage();
-        this.postPublishedAt = _post.getPublication_date();
-        this.url = _post.getSocial_url();
-        this.viewCount = _post.getView_count();
+        this.postPublishedAt = _post.getPublicationDate();
+        this.url = _post.getSocialUrl();
+        this.viewCount = _post.getViewCount();
 
         setCategory(_post.getCategory());
         setPostTags(_post.getTags());
