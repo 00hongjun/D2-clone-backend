@@ -1,6 +1,9 @@
 package com.study.d2spring.controller.list;
 
+import com.study.d2spring.domain.post.Post;
+import com.study.d2spring.service.post.PostService;
 import com.study.d2spring.view.home.HomeView;
+import com.study.d2spring.view.post.PostList;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
@@ -10,6 +13,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * api입장에서 메뉴(helloword, d2 news, d2 program, about d2)에 대한
@@ -20,14 +24,17 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 public class ListController {
 
+    private final PostService postService;
+
     /**
      * https://d2.naver.com/helloworld
      */
     @ApiOperation(value = "Category 1 (Helloworld) Post List API")
     @GetMapping("/helloworld")
-    public HomeView helloSorld() {
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        return new HomeView(request.getRequestURI());
+    public PostList helloSorld() {
+        List<Post> all = postService.findPostAll();
+
+        return new PostList(all);
     }
 
     /**

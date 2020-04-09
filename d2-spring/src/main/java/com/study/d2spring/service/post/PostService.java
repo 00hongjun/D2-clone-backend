@@ -13,11 +13,15 @@ public class PostService {
 
     private final PostRepository postRepository;
 
-    public Post findPostIdByCategory(Long _postId, Long _categoryId){
+    public Post findPostIdByCategory(Long _postId, Long _categoryId) {
         return postRepository.findOneByCategory(_postId, _categoryId);
     }
 
-    public List<Post> findAll(){
+    public List<Post> findAll() {
         return postRepository.findAll();
+    }
+
+    public List<Post> findPostAll() {
+        return postRepository.findPostAll();
     }
 }
