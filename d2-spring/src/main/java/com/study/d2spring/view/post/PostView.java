@@ -5,9 +5,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.study.d2spring.domain.member.Member;
 import com.study.d2spring.domain.post.Category;
 import com.study.d2spring.domain.post.Post;
+import com.study.d2spring.domain.reply.Reply;
 import com.study.d2spring.domain.tag.Tag;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +29,8 @@ public class PostView {
     private List<String> author = new ArrayList<>();
     private List<PostTag> postTags = new ArrayList<>();
     private List<Author> authors = new ArrayList<>();
+    private List<PostReply> postReplies = new ArrayList<>();
+
 
     public PostView(Post _post, List<Member> _members) {
         setPostData(_post);
@@ -42,8 +46,19 @@ public class PostView {
 
     @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    class Author {
+    class PostReply {
+        private Long id;
+        private String text;
+        private String replyer;
+        private String replyAt;
+        private int goodCount;
+        private int badCount;
+        private String comments;
+    }
 
+    @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    class Author {
         private String id;
         private String name;
         private String email;
@@ -51,7 +66,6 @@ public class PostView {
         private String position;
         private String profile;
         private String avatarUrl;
-
     }
 
     private void setCategory(Category _category) {
@@ -75,6 +89,7 @@ public class PostView {
     private void setAuthors(List<Member> _members) {
         for (int i = 0; i < _members.size(); i++) {
             Author author = new Author();
+
             author.id = _members.get(i).getId();
             author.name = _members.get(i).getName();
             author.email = _members.get(i).getEmail();
@@ -88,6 +103,26 @@ public class PostView {
         }
     }
 
+    private void setReplies(List<Reply> _replies){
+        for (int i = 0; i < _replies.size(); i++) {
+            PostReply reply = new PostReply();
+
+            reply.id = _replies.get(i).getId();
+            reply.replyer = _replies.get(i).getReplyer();
+            reply.badCount = _replies.get(i).getBadCount();
+            reply.goodCount = _replies.get(i).getGoodCount();
+            reply.text = _replies.get(i).getText();
+
+            LocalDateTime date = _replies.get(i).getReplyAt();
+            reply.replyAt = date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+
+            reply.comments = _replies.get(i).getComments();
+
+            this.postReplies.add(reply);
+        }
+    }
+
+
     private void setPostData(Post _post) {
         this.postTitle = _post.getTitle();
         this.postHtml = _post.getBody();
@@ -98,6 +133,7 @@ public class PostView {
 
         setCategory(_post.getCategory());
         setPostTags(_post.getTags());
+        setReplies(_post.getReplies());
     }
 
     /**
