@@ -56,14 +56,4 @@ public class ListController {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         return new HomeView(request.getRequestURI());
     }
-
-    /**
-     * https://d2.naver.com/about
-     */
-    @ApiOperation(value = "Schedule And History List API")
-    @GetMapping("/about")
-    public HomeView about() {
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        return new HomeView(request.getRequestURI());
-    }
 }

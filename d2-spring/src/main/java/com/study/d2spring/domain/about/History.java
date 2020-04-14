@@ -13,22 +13,24 @@ import javax.persistence.Table;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "d2_history")
-public class history {
+public class History {
 
     @Id
     @GeneratedValue
     private Long id;
     private String title;
-    private String year;
+    private String date;
     private String comment;
+    private String url;
 
     @Override
     public String toString() {
         return "history{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", year='" + year + '\'' +
+                ", date='" + date + '\'' +
                 ", comment='" + comment + '\'' +
+                ", url='" + url + '\'' +
                 '}';
     }
 }
