@@ -4,6 +4,7 @@ import com.study.d2spring.domain.post.Post;
 import com.study.d2spring.service.post.PostService;
 import com.study.d2spring.view.home.HomeView;
 import com.study.d2spring.view.post.PostList;
+import com.study.d2spring.view.post.TopList;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
@@ -13,6 +14,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,6 +27,49 @@ import java.util.List;
 public class ListController {
 
     private final PostService postService;
+
+    /**
+     * https://d2.naver.com/api/v1/top5
+     */
+    @ApiOperation(value = "Program URL List API")
+    @GetMapping("/top5")
+    public List<TopList> top5() {
+        List<Post> all = postService.findTop5();
+        List<TopList> top = new ArrayList<>();
+
+        for (int i = 0; i < all.size(); i++) {
+            top.add(new TopList(i, all.get(i)));
+        }
+        return top;
+    }
+
+    /**
+     * https://d2.naver.com/search?keyword=AAA
+     */
+    @ApiOperation(value = "Program URL List API")
+    @GetMapping("/search")
+    public PostList search(String keyword) {
+        List<Post> all = postService.search(keyword);
+
+        return new PostList(all);
+    }
+
+    /**
+     * https://d2.naver.com/api/v1/keywords
+     * <p>
+     * 미개발
+     */
+    @ApiOperation(value = "Program URL List API")
+    @GetMapping("/keywords")
+    public List<TopList> keywords() {
+        List<Post> all = postService.findTop5();
+        List<TopList> top = new ArrayList<>();
+
+        for (int i = 0; i < all.size(); i++) {
+            top.add(new TopList(i, all.get(i)));
+        }
+        return top;
+    }
 
     /**
      * https://d2.naver.com/helloworld

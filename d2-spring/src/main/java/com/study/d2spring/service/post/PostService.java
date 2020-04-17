@@ -24,4 +24,12 @@ public class PostService {
     public List<Post> findPostAll() {
         return postRepository.findPostAll();
     }
+
+    public List<Post> findTop5() {
+        return postRepository.findTop5();
+    }
+
+    public List<Post> search(String keyword) {
+        return postRepository.search(keyword);
+    }
 }

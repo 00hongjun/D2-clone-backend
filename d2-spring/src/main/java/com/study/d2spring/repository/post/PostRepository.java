@@ -1,6 +1,7 @@
 package com.study.d2spring.repository.post;
 
 import com.mysema.query.jpa.impl.JPAQuery;
+import com.study.d2spring.domain.member.QMember;
 import com.study.d2spring.domain.member.QPosting;
 import com.study.d2spring.domain.post.Post;
 import com.study.d2spring.domain.post.QCategory;
@@ -60,6 +61,40 @@ public class PostRepository {
         QPost qPost = QPost.post;
 
         List<Post> posts = query.from(qPost)
+                .list(qPost);
+
+        return posts;
+    }
+
+    public List<Post> findTop5() {
+        EntityManager em = emf.createEntityManager();
+        JPAQuery query = new JPAQuery(em);
+
+        QPost qPost = QPost.post;
+
+        List<Post> posts = query.from(qPost)
+                .limit(5)
+                .orderBy(qPost.viewCount.desc())
+                .list(qPost);
+
+        return posts;
+    }
+
+    public List<Post> search(String keyword) {
+        EntityManager em = emf.createEntityManager();
+        JPAQuery query = new JPAQuery(em);
+
+        QPost qPost = QPost.post;
+        QPosting qPosting = QPosting.posting;
+        QMember qMember = QMember.member;
+
+        List<Post> posts = query.from(qPost)
+                .innerJoin(qPost.posting, qPosting)
+                .innerJoin(qPosting.member, qMember)
+                .where(qPost.title.contains(keyword)
+                        .or(qPost.body.contains(keyword))
+                        .or(qMember.name.contains(keyword)))
+                .orderBy(qPost.id.desc())
                 .list(qPost);
 
         return posts;
