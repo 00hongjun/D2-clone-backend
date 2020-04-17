@@ -1,10 +1,8 @@
 package com.study.d2spring.controller.post;
 
 import com.study.d2spring.domain.member.Member;
-import com.study.d2spring.domain.tag.Tag;
 import com.study.d2spring.service.member.MemberService;
 import com.study.d2spring.service.tag.TagService;
-import com.study.d2spring.view.home.HomeView;
 import com.study.d2spring.domain.post.Post;
 import com.study.d2spring.service.post.PostService;
 import com.study.d2spring.view.post.PostView;
@@ -14,10 +12,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
-
-import javax.servlet.http.HttpServletRequest;
 
 import java.util.List;
 
@@ -27,7 +21,6 @@ import java.util.List;
 public class PostController {
     private final PostService postService;
     private final MemberService memberService;
-    private final TagService tagService;
 
     //카테고리 1 (기술 게시물)
     @ApiOperation(value = "Category 2 (Helloworld)  Post List API")

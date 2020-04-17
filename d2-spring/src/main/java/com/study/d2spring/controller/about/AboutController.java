@@ -1,13 +1,33 @@
 package com.study.d2spring.controller.about;
 
-//@RestController
-//@RequiredArgsConstructor
-//@Api(value = "AboutController", description = "about api controller")
+import com.study.d2spring.domain.about.History;
+import com.study.d2spring.domain.about.Schedule;
+import com.study.d2spring.service.about.AboutService;
+import com.study.d2spring.view.about.AboutView;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+@RequiredArgsConstructor
+@Api(value = "AboutController", description = "about api controller")
 public class AboutController {
-    //일정 및 히스토리
-//    @ApiOperation(value = "Schedule And History List API")
-//    @GetMapping(value = "/about")
-//    public String about(){
-//        return "about";
-//    }
+    private final AboutService aboutService;
+
+    /**
+     * https://d2.naver.com/about
+     */
+    @ApiOperation(value = "History And Schedule List API")
+    @GetMapping("/about")
+    public AboutView about() {
+        List<History> histories = aboutService.findHistoryAll();
+
+        List<Schedule> schedules = aboutService.findScheduleAll();
+
+        return new AboutView(histories, schedules);
+    }
 }

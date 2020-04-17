@@ -169,6 +169,45 @@ VALUES
 (6,
 668);
 
+INSERT INTO `d2_db`.`d2_post_reply`
+(`reply_id`,
+`bad_count`,
+`comments`,
+`good_count`,
+`reply_at`,
+`replyer`,
+`text`,
+`post_id`)
+VALUES
+(1,
+0,
+'',
+0,
+20200324131300,
+'황금비',
+'WebFlux에 관심이 많이가던데 좋은 정리 감사합니다. DB와 연결된 서버는 도입이 안되더라도 Gateway서버에서는 효율이 좋을거 같은 느낌인데요 맞나요..?!',
+668);
+
+INSERT INTO `d2_db`.`d2_post_reply`
+(`reply_id`,
+`bad_count`,
+`comments`,
+`good_count`,
+`reply_at`,
+`replyer`,
+`text`,
+`post_id`)
+VALUES
+(2,
+1,
+'',
+2,
+20200221121000,
+'브로걸리',
+'nodejs는 새로운 언어가 아니라 javascript 런타임환경을 제공하는 플랫폼입니다.많은 쥬니어 개발자들이 참조하는 사이트인만큼 잘못된 정보가 전파되지 않도록 수정이 필요해보이네요.',
+668);
+
+
 select * from d2_category, d2_member, d2_post,d2_posting
 where d2_category.category_id = d2_post.category_id
 and d2_member.member_id = d2_posting.posting_member_id
