@@ -1,4 +1,3 @@
-use d2_db;
 
 INSERT INTO `d2_db`.`d2_schedule`
 (`id`,
