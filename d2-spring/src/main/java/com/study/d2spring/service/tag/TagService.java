@@ -15,4 +15,8 @@ public class TagService {
     public List<Tag> fingByPostId(Long _postId){
         return tagRepository.fingByPostId(_postId);
     }
+
+    public List<Tag> findTagTop5(){
+        return tagRepository.findTagTop5();
+    }
 }

@@ -47,11 +47,23 @@ public class PostRepository {
 
         Post post = query.from(qPost, qCategory)
                 .innerJoin(qPost.category, qCategory)
-                .innerJoin(qPost.category, qCategory)
                 .where(qPost.id.eq(_postId).and(qCategory.id.eq(_categoryId)))
                 .uniqueResult(qPost);
 
         return post;
+    }
+
+    public List<Post> findPostAllByCategory(Long _categoryId) {
+        EntityManager em = emf.createEntityManager();
+        JPAQuery query = new JPAQuery(em);
+
+        QPost qPost = QPost.post;
+
+        List<Post> posts = query.from(qPost)
+                .where(qPost.category.id.eq(_categoryId))
+                .list(qPost);
+
+        return posts;
     }
 
     public List<Post> findPostAll() {

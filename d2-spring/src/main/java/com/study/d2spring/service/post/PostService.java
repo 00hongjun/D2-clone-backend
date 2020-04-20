@@ -25,6 +25,10 @@ public class PostService {
         return postRepository.findPostAll();
     }
 
+    public List<Post> findPostAllByCategory(Long _categoryId) {
+        return postRepository.findPostAllByCategory(_categoryId);
+    }
+
     public List<Post> findTop5() {
         return postRepository.findTop5();
     }

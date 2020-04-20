@@ -4,6 +4,7 @@ import com.mysema.query.jpa.impl.JPAQuery;
 import com.study.d2spring.domain.member.Member;
 import com.study.d2spring.domain.member.QMember;
 import com.study.d2spring.domain.member.QPosting;
+import com.study.d2spring.domain.post.Post;
 import com.study.d2spring.domain.post.QPost;
 import com.study.d2spring.domain.tag.QTag;
 import com.study.d2spring.domain.tag.Tag;
@@ -37,6 +38,24 @@ public class TagRepository {
                 .list(qTag);
 
         return tags;
+    }
+
+    public List<Tag> findTagTop5(){
+        em = emf.createEntityManager();
+
+        JPAQuery query = new JPAQuery(em);
+
+        QTag qTag = QTag.tag;
+        QPost qPost = QPost.post;
+
+        List<Tag> tags = query.from(qTag, qPost)
+                .innerJoin(qTag.posts, qPost)
+                .orderBy(qPost.viewCount.desc(), qTag.name.asc())
+                .limit(5)
+                .list(qTag);
+
+        return tags;
+
     }
 
 }

@@ -1,8 +1,11 @@
 package com.study.d2spring.controller.list;
 
 import com.study.d2spring.domain.post.Post;
+import com.study.d2spring.domain.tag.Tag;
 import com.study.d2spring.service.post.PostService;
+import com.study.d2spring.service.tag.TagService;
 import com.study.d2spring.view.home.HomeView;
+import com.study.d2spring.view.post.KeywordList;
 import com.study.d2spring.view.post.PostList;
 import com.study.d2spring.view.post.TopList;
 import io.swagger.annotations.Api;
@@ -27,11 +30,12 @@ import java.util.List;
 public class ListController {
 
     private final PostService postService;
+    private final TagService tagService;
 
     /**
      * https://d2.naver.com/api/v1/top5
      */
-    @ApiOperation(value = "Program URL List API")
+    @ApiOperation(value = "View Count Top5 List API")
     @GetMapping("/top5")
     public List<TopList> top5() {
         List<Post> all = postService.findTop5();
@@ -44,9 +48,25 @@ public class ListController {
     }
 
     /**
+     * https://d2.naver.com/api/v1/keyword
+     */
+    @ApiOperation(value = "Top Keyword List API")
+    @GetMapping("/keyworld")
+    public List<KeywordList> topKeyword() {
+        List<Tag> tags = tagService.findTagTop5();
+
+        List<KeywordList> keywordLists = new ArrayList<>();
+
+        for (int i = 0; i < tags.size(); i++) {
+            keywordLists.add(new KeywordList(tags.get(i)));
+        }
+        return keywordLists;
+    }
+
+    /**
      * https://d2.naver.com/search?keyword=AAA
      */
-    @ApiOperation(value = "Program URL List API")
+    @ApiOperation(value = "Search List API")
     @GetMapping("/search")
     public PostList search(String keyword) {
         List<Post> all = postService.search(keyword);
@@ -55,50 +75,35 @@ public class ListController {
     }
 
     /**
-     * https://d2.naver.com/api/v1/keywords
-     * <p>
-     * 미개발
+     * https://d2.naver.com/home
      */
-    @ApiOperation(value = "Program URL List API")
-    @GetMapping("/keywords")
-    public List<TopList> keywords() {
-        List<Post> all = postService.findTop5();
-        List<TopList> top = new ArrayList<>();
+    @ApiOperation(value = "All (Home) Post List API")
+    @GetMapping("/home")
+    public PostList home() {
+        List<Post> homePost = postService.findPostAll();
 
-        for (int i = 0; i < all.size(); i++) {
-            top.add(new TopList(i, all.get(i)));
-        }
-        return top;
+        return new PostList(homePost);
     }
 
     /**
      * https://d2.naver.com/helloworld
      */
-    @ApiOperation(value = "Category 1 (Helloworld) Post List API")
+    @ApiOperation(value = "Category 2 (Helloworld) Post List API")
     @GetMapping("/helloworld")
-    public PostList helloSorld() {
-        List<Post> all = postService.findPostAll();
+    public PostList helloworld() {
+        List<Post> helloworldPost = postService.findPostAllByCategory(new Long(2));
 
-        return new PostList(all);
+        return new PostList(helloworldPost);
     }
 
     /**
      * https://d2.naver.com/news
      */
-    @ApiOperation(value = "Category 2 (news) Post List API")
+    @ApiOperation(value = "Category 3 (news) Post List API")
     @GetMapping("/news")
-    public HomeView news() {
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        return new HomeView(request.getRequestURI());
-    }
+    public PostList news() {
+        List<Post> newsPost = postService.findPostAllByCategory(new Long(3));
 
-    /**
-     * https://d2.naver.com/program
-     */
-    @ApiOperation(value = "Program URL List API")
-    @GetMapping("/program")
-    public HomeView program() {
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        return new HomeView(request.getRequestURI());
+        return new PostList(newsPost);
     }
 }

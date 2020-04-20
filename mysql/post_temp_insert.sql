@@ -1,5 +1,154 @@
 use d2_db;
 
+INSERT INTO `d2_db`.`d2_schedule`
+(`id`,
+`image`,
+`schedule`,
+`title`,
+`comment`,
+`url`)
+VALUES
+(1,
+"",
+"20년 3월 18일 ~ 4월 2일 접수 \n 20년 5월 21일 ~ 5월 22일 핵데이",
+"NAVER CAMPUS HACKDAY",
+"NAVER 개발자와 함께하는 24시간의 해커톤",
+"https://recruit.navercorp.com/naver/job/detail/developer?annoId=20003868&classId=&jobId=&entTypeCd=004&searchTxt=&searchSysComCd=");
+
+INSERT INTO `d2_db`.`d2_schedule`
+(`id`,
+`image`,
+`schedule`,
+`title`,
+`comment`,
+`url`)
+VALUES
+(2,
+"",
+"20년 7월 예정",
+"NAVER TECH CONCERT",
+"Mobile 개발을 주제로 기술 컨퍼런스 진행",
+"https://techcon.naver.com/");
+
+INSERT INTO `d2_db`.`d2_schedule`
+(`id`,
+`image`,
+`schedule`,
+`title`,
+`comment`,
+`url`)
+VALUES
+(3,
+"",
+"20년 9월 예정",
+"DEVIEW",
+"네이버 개발자 컨퍼런스",
+"https://deview.kr/2019");
+
+
+INSERT INTO `d2_db`.`d2_schedule`
+(`id`,
+`image`,
+`schedule`,
+`title`,
+`comment`,
+`url`)
+VALUES
+(1,
+"",
+"",
+"NAVER CAMPUS HACKDAY",
+"NAVER 개발자와 함께하는 24시간의 해커톤",
+"https://recruit.navercorp.com/naver/job/detail/developer?annoId=20003868&classId=&jobId=&entTypeCd=004&searchTxt=&searchSysComCd=");
+
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(1,
+"빅데이터 엔지니어링 컨퍼런스 \n
+국내외 IT기업 엔지니어들이 연사로 참여",
+"SDEC 2011",
+"2011.6.27~28",
+"");
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(2,
+"SHARING, EXCELLENCE, GROWTH \n
+순수 기술행사 지향 \n
+외부 개발자 연사 처음으로 초청",
+"DEVIEW 2011",
+"2011.10.18",
+"https://deview.kr/2011/");
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(3,
+"NAVER 개발자들의 실전 노하우와 \n
+지식을 담은 블로그",
+"HELLO WORLD",
+"2011.12.29 오픈",
+"");
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(4,
+"빅데이터 엔지니어링 컨퍼런스 \n
+국내외 IT기업 엔지니어들이 연사로 참여",
+"D2 OPEN SEMINAR",
+"2012.5 시작",
+"https://developers.naver.com/seminar/introduction.nhn");
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(5,
+"국내외 IT 회사 대거 참여, 컨텐츠 수준 크게 향상 \n
+세션 수도 42개로 더 풍성해짐 \n
+우수 논문 리뷰를 통해 학계 연사 초대 \n
+BOF(자유토론) 세션 진행",
+"DEVIEW 2012",
+"2012",
+"");
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(6,
+"소모임 장소, 서버 제공, 컨퍼런스 후원 등 \n
+열정있는 개발자들의 커뮤니티 활동 응원",
+"D2 COMMUNITY",
+"2013.5 시작",
+"https://developers.naver.com/wiki/pages/Community");
+
 INSERT INTO `d2_db`.`d2_category`
 (`category_id`,
 `name`)
@@ -145,13 +294,6 @@ INSERT INTO `d2_db`.`d2_tag_post`
 (`tag_id`,
 `post_id`)
 VALUES
-(3,
-668);
-
-INSERT INTO `d2_db`.`d2_tag_post`
-(`tag_id`,
-`post_id`)
-VALUES
 (4,
 668);
 
@@ -206,9 +348,3 @@ VALUES
 '브로걸리',
 'nodejs는 새로운 언어가 아니라 javascript 런타임환경을 제공하는 플랫폼입니다.많은 쥬니어 개발자들이 참조하는 사이트인만큼 잘못된 정보가 전파되지 않도록 수정이 필요해보이네요.',
 668);
-
-
-select * from d2_category, d2_member, d2_post,d2_posting
-where d2_category.category_id = d2_post.category_id
-and d2_member.member_id = d2_posting.posting_member_id
-and d2_post.post_id = d2_posting.posting_post_id;
