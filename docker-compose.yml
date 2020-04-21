@@ -23,5 +23,6 @@ services:
         build: ./d2-spring/.
         ports:
             - "8080:8080"
+        restart: on-failure
         depends_on:
             - mysql_db
