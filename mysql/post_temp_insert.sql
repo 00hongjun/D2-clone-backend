@@ -45,22 +45,6 @@ VALUES
 "https://deview.kr/2019");
 
 
-INSERT INTO `d2_db`.`d2_schedule`
-(`id`,
-`image`,
-`schedule`,
-`title`,
-`comment`,
-`url`)
-VALUES
-(1,
-"",
-"",
-"NAVER CAMPUS HACKDAY",
-"NAVER 개발자와 함께하는 24시간의 해커톤",
-"https://recruit.navercorp.com/naver/job/detail/developer?annoId=20003868&classId=&jobId=&entTypeCd=004&searchTxt=&searchSysComCd=");
-
-
 INSERT INTO `d2_db`.`d2_history`
 (`id`,
 `comment`,
