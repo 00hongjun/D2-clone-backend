@@ -26,3 +26,20 @@ services:
         restart: on-failure
         depends_on:
             - mysql_db
+
+    spring-backup:
+        container_name: spring-backup
+        build: ./d2-spring/.
+        ports:
+            - "8090:8090"
+        restart: on-failure
+        depends_on:
+            - mysql_db
+
+    nginx:
+        container_name: nginx
+        image: nginx:latest
+        ports:
+            - "81:81"
+        volumes:
+            - ./nginx/nginx.conf:/etc/nginx/nginx.conf
