@@ -4,6 +4,7 @@ import com.study.d2spring.domain.about.History;
 import com.study.d2spring.domain.about.Schedule;
 import com.study.d2spring.service.about.AboutService;
 import com.study.d2spring.view.about.AboutView;
+import com.study.d2spring.view.error.ErrorView;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
@@ -23,11 +24,15 @@ public class AboutController {
      */
     @ApiOperation(value = "History And Schedule List API")
     @GetMapping("/about")
-    public AboutView about() {
-        List<History> histories = aboutService.findHistoryAll();
+    public Object about() {
+        try {
+            List<History> histories = aboutService.findHistoryAll();
 
-        List<Schedule> schedules = aboutService.findScheduleAll();
+            List<Schedule> schedules = aboutService.findScheduleAll();
 
-        return new AboutView(histories, schedules);
+            return new AboutView(histories, schedules);
+        } catch (Exception e){
+            return new ErrorView("ERST", e.getMessage());
+        }
     }
 }
