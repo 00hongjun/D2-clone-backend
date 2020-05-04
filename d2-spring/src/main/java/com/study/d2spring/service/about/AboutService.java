@@ -6,11 +6,13 @@ import com.study.d2spring.domain.about.Schedule;
 import com.study.d2spring.repository.about.AboutRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class AboutService {
 
     private final AboutRepository aboutRepository;

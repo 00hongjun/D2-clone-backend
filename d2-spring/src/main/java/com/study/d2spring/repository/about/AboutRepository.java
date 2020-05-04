@@ -17,10 +17,14 @@ public class AboutRepository {
     private final EntityManager em;
 
     public List<History> findHistoryAll() {
-        return em.createQuery("select h from History h", History.class).getResultList();
+        List<History> result = em.createQuery("select h from History h", History.class).getResultList();
+        em.close();
+        return result;
     }
 
     public List<Schedule> findScheduleAll() {
-        return em.createQuery("select s from Schedule s", Schedule.class).getResultList();
+        List<Schedule> result = em.createQuery("select s from Schedule s", Schedule.class).getResultList();
+        em.close();
+        return result;
     }
 }

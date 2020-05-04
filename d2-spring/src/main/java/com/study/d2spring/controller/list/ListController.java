@@ -13,6 +13,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,7 +44,7 @@ public class ListController {
             }
             return top;
 
-        } catch (Exception e){
+        } catch (Exception e) {
             return new ErrorView("ERST", e.getMessage());
         }
     }
@@ -54,18 +55,17 @@ public class ListController {
     @ApiOperation(value = "Top Keyword List API")
     @GetMapping("/keyword")
     public Object topKeyword() {
-        try {
-            List<Tag> tags = tagService.findTagTop5();
+//        try {
+        List<Tag> tags = tagService.findTagTop5();
+        List<KeywordList> keywordLists = new ArrayList<>();
 
-            List<KeywordList> keywordLists = new ArrayList<>();
-
-            for (int i = 0; i < tags.size(); i++) {
-                keywordLists.add(new KeywordList(tags.get(i)));
-            }
-            return keywordLists;
-        } catch (Exception e){
-            return new ErrorView("ERST", e.getMessage());
+        for (int i = 0; i < tags.size(); i++) {
+            keywordLists.add(new KeywordList(tags.get(i)));
         }
+        return keywordLists;
+//        } catch (Exception e){
+//            return new ErrorView("ERST", e.getMessage());
+//        }
     }
 
     /**
@@ -82,7 +82,7 @@ public class ListController {
             List<Post> all = postService.search(keyword);
 
             return new PostList(all);
-        } catch (Exception e){
+        } catch (Exception e) {
             return new ErrorView("ERST", e.getMessage());
         }
     }
@@ -97,7 +97,7 @@ public class ListController {
             List<Post> homePost = postService.findPostAll();
 
             return new PostList(homePost);
-        } catch (Exception e){
+        } catch (Exception e) {
             return new ErrorView("ERST", e.getMessage());
         }
     }
@@ -112,7 +112,7 @@ public class ListController {
             List<Post> helloworldPost = postService.findPostAllByCategory(new Long(2));
 
             return new PostList(helloworldPost);
-        } catch (Exception e){
+        } catch (Exception e) {
             return new ErrorView("ERST", e.getMessage());
         }
     }
@@ -127,7 +127,7 @@ public class ListController {
             List<Post> newsPost = postService.findPostAllByCategory(new Long(3));
 
             return new PostList(newsPost);
-        } catch (Exception e){
+        } catch (Exception e) {
             return new ErrorView("ERST", e.getMessage());
         }
     }

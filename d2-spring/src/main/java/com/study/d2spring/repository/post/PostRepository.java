@@ -35,6 +35,7 @@ public class PostRepository {
                 .innerJoin(qPost.posting, qPosting)
                 .list(qPost);
 
+        em.close();
         return posts;
     }
 
@@ -50,6 +51,7 @@ public class PostRepository {
                 .where(qPost.id.eq(_postId).and(qCategory.id.eq(_categoryId)))
                 .uniqueResult(qPost);
 
+        em.close();
         return post;
     }
 
@@ -63,6 +65,7 @@ public class PostRepository {
                 .where(qPost.category.id.eq(_categoryId))
                 .list(qPost);
 
+        em.close();
         return posts;
     }
 
@@ -75,6 +78,7 @@ public class PostRepository {
         List<Post> posts = query.from(qPost)
                 .list(qPost);
 
+        em.close();
         return posts;
     }
 
@@ -89,6 +93,7 @@ public class PostRepository {
                 .orderBy(qPost.viewCount.desc())
                 .list(qPost);
 
+        em.close();
         return posts;
     }
 
@@ -109,6 +114,7 @@ public class PostRepository {
                 .orderBy(qPost.id.desc())
                 .list(qPost);
 
+        em.close();
         return posts;
     }
 }

@@ -35,6 +35,7 @@ public class MemberRepository {
 
 //        System.out.println(members.get(0).toString());
 
+        em.close();
         return members;
 
     }

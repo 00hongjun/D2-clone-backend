@@ -37,6 +37,7 @@ public class TagRepository {
                 .where(qPost.post.id.eq(_postId))
                 .list(qTag);
 
+        em.close();
         return tags;
     }
 
@@ -54,6 +55,7 @@ public class TagRepository {
                 .limit(5)
                 .list(qTag);
 
+        em.close();
         return tags;
 
     }

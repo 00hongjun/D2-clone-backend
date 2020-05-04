@@ -13,8 +13,13 @@ spring:
         validationQuery: "SELECT 1"
         testOnBorrow: true
         timeBetweenEvictionRunsMillis: 60000
-
-
+        sql-script-encoding: UTF-8
+        hikari:
+            maximum-pool-size: 10
+            connection-timeout: 5000
+            idle-timeout: 5000
+            max-lifetime: 10000
+            validation-timeout: 10000
 
     jpa:
         hibernate:
