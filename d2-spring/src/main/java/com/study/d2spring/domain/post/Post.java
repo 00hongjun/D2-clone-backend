@@ -40,7 +40,9 @@ public class Post {
     @OneToMany(mappedBy = "post", fetch = FetchType.LAZY)
     private List<Posting> posting = new ArrayList<>();
 
-    @ManyToOne(fetch = FetchType.LAZY)//xtoOne 에 대한 지연로딩 설정
+    @ManyToOne(fetch = FetchType.EAGER)//xtoOne 에 대한 지연로딩 설정 -> 에러 발생
+    //해결 방법 :
+    //참고 링크 (https://bebong.tistory.com/entry/JPA-Lazy-Evaluation-LazyInitializationException-could-not-initialize-proxy-–-no-Session)
     @JoinColumn(name = "category_id")//외래키 (조인키가 category_id 가 됨)
     private Category category;
 
