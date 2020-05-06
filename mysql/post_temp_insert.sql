@@ -172,6 +172,198 @@ now(),
 5825,
 2);
 
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(669,
+"<p> NAVER에서는 다양한 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 2019년 12월에 진행한 사내 안드로이드 개발 밋업 중 발표자의 공개 동의를 얻은 발표 영상을 공유합니다. </p>",
+"/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
+now(),
+"https://d2.naver.com/news/8738186",
+"NAVER Tech Talk: UIT 개발 밋업(2019년 12월)",
+2502,
+3);
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(670,
+"<h4>네이버 개발자와 함께하는 대학생 해커톤!<br/></h4>\n\n<p>올해도 2020 NAVER CAMPUS HACKDAY가 찾아왔어요♬\n </p>",
+"/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
+now(),
+"https://d2.naver.com/news/6826105",
+"2020 NAVER CAMPUS HACKDAY 안내",
+7564,
+3);
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(671,
+"<p>NAVER에서는 다양한 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 2019년 11월에 진행한 사내 UIT 개발 밋업 중 발표자의 공개 동의를 얻은 발표 영상을 공유합니다.</p>",
+"/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
+now(),
+"https://d2.naver.com/news/6826105",
+"NAVER Tech Talk: UIT 개발 밋업(2019년 11월)",
+7564,
+3);
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(672,
+"<p>NAVER에서는 매주 사내외 전문가를 초빙하여 테크톡을 진행하고 있는데요. 발표자 분의 공개 동의를 얻어 <a href=\"https://www.facebook.com/naverengineering/\">NAVER Engineering 페이스북</a>에 공개한 AI 주제의 발표 영상(2019년 1월, 5월~10월), 일곱 번째 목록을 정리하였습니다.</p>",
+"/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
+now(),
+"https://d2.naver.com/news/7618832",
+"NAVER Tech Talk: AI 7차 (2019년 1월, 5월~10월)",
+3892,
+3);
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(673,
+"<p>NAVER에서는 다양한 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 2018년 11월과 2019년 11월에 진행한 사내 Android 밋업 중 발표자의 공개 동의를 얻은 발표 영상을 공유합니다.</p>",
+"/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
+now(),
+"https://d2.naver.com/news/4699566",
+"NAVER Tech Talk: Android 밋업(2018년 11월, 2019년 10월)",
+2437,
+3);
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(674,
+"<h4>네이버 개발자와 함께하는 대학생 해커톤!<br/></h4>\n\n<p>2019 NAVER CAMPUS HACKDAY WINTER 열립니다. <br /></p>",
+"/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
+now(),
+"https://d2.naver.com/news/4972264",
+"2019 NAVER CAMPUS HACKDAY WINTER",
+5690,
+3);
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(675,
+"<p>NAVER에서는 다양한 FE 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 이번 FE devtalk 15회 주제는 \"UX Engineering\"으로 다음과 같은 발표들을 살펴보겠습니다. 해당 FE devtalk 중 발표자의 공개 동의를 얻은 영상을 공유합니다.</p>",
+"/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
+now(),
+"https://d2.naver.com/news/3691882",
+"NAVER Tech Talk: FE devtalk 15회 (2019년 9월)",
+2900,
+3);
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(676,
+"<h4>네이버 개발자와 함께하는 대학생 해커톤!<br/></h4>\n\n<p>2019 NAVER CAMPUS HACKDAY SUMMER가 열립니다. <br /></p>",
+"/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
+now(),
+"https://d2.naver.com/news/5009947",
+"2019 NAVER CAMPUS HACKDAY SUMMER 안내",
+6717,
+3);
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(677,
+"<p>오픈소스는 그 '사용'에 대해서도 그리고 '참가'적인 측면에서 아주 많은 관심을 얻고 있습니다. 그러나 오픈소스 프로젝트를 운영하는 데 있어서 그 뒷모습은 잘 알려져 있지는 않은데요. 다음의 질문들에 대한 궁금증을 NAVER의 박재성 님과 함께 풀어 보고자 합니다. </p>",
+"/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
+now(),
+"https://d2.naver.com/news/6617235",
+"NAVER Tech Talk: 오픈소스 프로젝트 운영 경험 공유",
+2531,
+3);
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(678,
+"<p>NAVER에서는 다양한 기술에 대한 테크톡과 밋업을 주기적으로 진행하고 있는데요. 2018년 8월, 2019년 1월에 진행한 사내 Golang 밋업의 발표 영상을 공유합니다.</p>",
+"/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
+now(),
+"https://d2.naver.com/news/3383672",
+"NAVER Tech Talk: Golang 밋업(2018년 8월, 2019년 1월)",
+3018,
+3);
+
+
+
 INSERT INTO `d2_db`.`d2_member`
 (`member_id`,
 `department`,
