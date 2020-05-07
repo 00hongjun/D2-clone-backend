@@ -363,6 +363,198 @@ now(),
 3);
 
 
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(651,
+"<p>NAVER에서는 다양한 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 2019년 5월과 6월에 진행한 사내 Android 밋업 중 발표자의 공개 동의를 얻은 발표 영상을 공유합니다.</p>",
+"/content/images/2019/07/----Meetup72_20190625_Android---_-------mp4_20190726_110239-594.jpg",
+now(),
+"https://d2.naver.com/news/9293611",
+"NAVER Tech Talk: Android 밋업(2019년 5,6월)",
+2667,
+3);
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(650,
+"<p>HDFS(Hadoop Distributed File System)는 기본적으로 데이터 노드의 모든 스토리지를 동일한 유형이라 여기고 작동합니다. 데이터의 읽고 쓰기를 스토리지의 성능을 고려해 알맞은 유형의 스토리지에서 실행하지 않습니다. 그래서 HDD와 SSD를 함께 사용할 때 읽기 쓰기 작업이 많은 데이터를 SSD에 집중해서 저장하게 해 성능을 높일 수 없습니다.</p>",
+"/content/images/2019/07/190711_helloworld.jpg",
+now(),
+"http://d2.naver.com/helloworld/7702933",
+"HDFS의 Heterogeneous Storage 적용기 - Pinpoint 비용 효율화",
+3957,
+2);
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(649,
+"<p>다양한 컴포넌트의 조합으로 구성된 서비스를 운영하다보면 <br />\n장애나 성능 문제가 발생했을 때 정확한 원인을 파악하는데 시간이 오래 걸린다는 또다른 난제에 부딪히곤 합니다.</p>",
+"/content/images/2019/06/image.png",
+now(),
+"http://d2.naver.com/helloworld/8819851",
+"NAVER 오픈소스 세미나 - Performance does matter",
+12698,
+2);
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(648,
+"<p>\"<a href=\"https://d2.naver.com/helloworld/7543578\">Google I/O 2017 참관기 - Kotlin</a>\"에서 소개한 것처럼 <a href=\"https://kotlinlang.org/\">Kotlin</a>은 JVM은 물론 Android, JavaScript, 네이티브 영역 등 다양한 플랫폼에서 사용할 수 있는 정적 타입(statically typed) 언어입니다. Java에 비해 코드를 간결하게 작성할 수 있으며, 좀 더 안전하게 null을 다룰 수 있는 문법을 제공하는 것이 주요 특징입니다. 또한 Java와 100% 호환되어 기존 라이브러리를 활용할 수 있습니다. 그래서 기존에 Java로 작성된 프로젝트에 점진적으로 Kotlin을 도입하는 것이 가능합니다.</p>",
+"/content/images/2019/06/helloworld-201906-sangyeong-chung-1.jpg",
+now(),
+"http://d2.naver.com/helloworld/6685007",
+"Kotlin 도입 과정에서 만난 문제와 해결 방법",
+13653,
+2);
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(647,
+"<p>매해 겨울방학과 함께했던 D2 CAMPUS FEST가 대학생 개발자 여러분과 더 가까이 하기위해 여름방학을 맞아 FEST mini로 찾아왔습니다. FEST mini는 자유주제 없이 서비스, 모바일 앱, 라이브러리 개발 등 아홉개의 지정주제와 함께합니다.</p>",
+"/content/images/2019/06/d2------------------.png",
+now(),
+"http://d2.naver.com/news/8855647",
+"제7회 D2 CAMPUS FEST mini가 시작됩니다.",
+2999,
+3);
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(646,
+"<p><a href=\"https://webassembly.org/\">WebAssembly</a>는 C와 C++ 같은 프로그래밍 언어를 컴파일해 어느 브라우저에서나 빠르게 실행되는 바이너리 형식(low-level language)으로 바꾸는 기술입니다. 별도의 플러그인을 사용하지 않고 브라우저에서 네이티브 언어 수준의 성능을 보여 줄 수 있는 기술이 WebAssembly의 목표입니다.</p>",
+"/content/images/2019/06/d2------------------.png",
+now(),
+"http://d2.naver.com/helloworld/8786166",
+"2019년과 이후 JavaScript의 동향 - WebAssembly",
+18100,
+2);
+
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(645,
+"<p>최근 들어 REST API의 단점을 보완하고 더 개선된 사용 환경을 제공하기 위해 네이버의 다양한 서비스에서 <a href=\"https://graphql.org/\">GraphQL</a>을 기반으로 한 <a href=\"https://www.apollographql.com/docs/react/\">Apollo Client</a>를 도입하기 시작했습니다. Apollo Client 도입 이후 기존에 사용하던 <a href=\"https://redux.js.org/\">Redux</a>와 <a href=\"https://reactjs.org/docs/react-component.html\">라이프사이클 메서드</a>의 사용빈도가 줄었습니다. 반면에 GraphQL과 React의 <a href=\"https://reactjs.org/docs/hooks-intro.html\">Hooks</a>에 대한 기본 개념의 숙지가 중요해졌습니다.</p>",
+"/content/images/2019/06/helloworld-201903-seungho-1-1.png",
+now(),
+"http://d2.naver.com/helloworld/4245995",
+"Apollo Client는 Redux와 무엇이 다른가",
+13264,
+2);
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(644,
+"<p>JavaScript의 인기는 이제는 굳이 언급할 필요가 없어 보일 만큼 계속되고 있습니다. GitHub의 보고서인 <a href=\"https://octoverse.github.com/\">Octoverse</a>의 <a href=\"https://octoverse.github.com/projects#languages\">그래프</a>에 나타난 것처럼 JavaScript는 여러 해 동안 GitHub에서 가장 많이 사용된 언어입니다. Stack Overflow의 최근 설문 조사 결과인 \"<a href=\"https://insights.stackoverflow.com/survey/2019#technology\">Developer Survey Results 2019</a>\"에서는 JavaScript가 가장 인기 있는 기술로 선정되었습니다.</p>",
+"/content/images/2019/06/helloworld-201904-jaesung-park_1-02-1.png",
+now(),
+"http://d2.naver.com/helloworld/4007447",
+"2019년과 이후 JavaScript의 동향 - JavaScript(ECMAScript)",
+25018,
+2);
+
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(643,
+"<blockquote>\n  <p>\"<a href=\"#eng\">Integrating Istio with Telepresence to develop applications that run on a shared Kubernetes cluster locally</a>\"(English)</p>\n</blockquote>\n\n<p><a id=\"kor\"></a> <br />\n<a href=\"https://d2.naver.com/helloworld/7861046\">Telepresence로 Kubernetes 클러스터에서 실행할 애플리케이션을 로컬 환경에서 개발하기</a>\"에서는 Kubernetes 클러스터에서 실행할 애플리케이션을 <a href=\"https://www.telepresence.io/\">Telepresence</a>를 사용해 로컬 환경에서 개발하는 방법을 소개했습니다. 그러나 공용 Kubernetes 클러스터에서 실행되는 여러 애플리케이션으로 구성된 하나의 서비스를 여러 개발자가 개발할 때에는 Telepresence를 사용하기 어렵습니다.</p>",
+"/content/images/2019/06/helloworld-201904-san-ha-lee_2-1-2.png",
+now(),
+"http://d2.naver.com/helloworld/4817173",
+"Istio와 Telepresence로 공용 Kubernetes 클러스터에서 실행할 애플리케이션을 로컬 환경에서 개발하기",
+4606,
+2);
+
+INSERT INTO `d2_db`.`d2_post`
+(`post_id`,
+`body`,
+`image`,
+`publication_date`,
+`social_url`,
+`title`,
+`view_count`,
+`category_id`)
+VALUES
+(642,
+"<p>NAVER에서는 다양한 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 2019년 2월과 4월에 진행한 사내 iOS 밋업 중 발표자의 공개 동의를 얻은 발표 영상을 공유합니다.</p>",
+"/content/images/2019/06/----meetup68_ios--_---_--_20190429-mp4_20190604_154233-863.jpg",
+now(),
+"http://d2.naver.com/news/7569447",
+"NAVER Tech Talk: iOS 밋업(2019년 2월,4월)",
+2383,
+3);
+
 
 INSERT INTO `d2_db`.`d2_member`
 (`member_id`,
