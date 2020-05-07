@@ -17,7 +17,8 @@ public class AboutRepository {
     private final EntityManager em;
 
     public List<History> findHistoryAll() {
-        List<History> result = em.createQuery("select h from History h", History.class).getResultList();
+        List<History> result = em.createQuery("select h from History h order by h.id",
+                History.class).getResultList();
         em.close();
         return result;
     }

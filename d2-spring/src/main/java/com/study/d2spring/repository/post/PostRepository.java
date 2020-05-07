@@ -105,9 +105,9 @@ public class PostRepository {
         QPosting qPosting = QPosting.posting;
         QMember qMember = QMember.member;
 
-        List<Post> posts = query.from(qPost)
-                .innerJoin(qPost.posting, qPosting)
-                .innerJoin(qPosting.member, qMember)
+        List<Post> posts = query.from(qPost, qMember)
+//                .innerJoin(qPost.posting, qPosting)
+//                .innerJoin(qPosting.member, qMember)
                 .where(qPost.title.contains(keyword)
                         .or(qPost.body.contains(keyword))
                         .or(qMember.name.contains(keyword)))
