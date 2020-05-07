@@ -1,0 +1,11 @@
+update d2_db.d2_post set image="https://d2.naver.com/content/images/2020/04/---.png" where post_id=668;
+update d2_db.d2_post set image="https://d2.naver.com/content/images/2020/03/01-1.jpg" where post_id=669;
+update d2_db.d2_post set image="https://d2.naver.com/content/images/2020/02/spring-mvc-and-webflux-venn-1.png" where post_id=670;
+update d2_db.d2_post set image="https://d2.naver.com/content/images/2020/02/0a705587-6eb1-1932-816f-656fa9ed5399-1.png" where post_id=671;
+update d2_db.d2_post set image="https://d2.naver.com/content/images/2020/01/---_---_uit.jpg" where post_id=672;
+update d2_db.d2_post set image="https://d2.naver.com/content/images/2020/01/fffffasdf-1.jpg" where post_id=673;
+update d2_db.d2_post set image="https://d2.naver.com/content/images/2019/12/---_---.jpg" where post_id=674;
+update d2_db.d2_post set image="https://d2.naver.com/content/images/2019/12/-------.jpg" where post_id=675;
+update d2_db.d2_post set image="https://d2.naver.com/content/images/2019/11/helloworld-201909-jaesung-park_5-05.jpg" where post_id=676;
+update d2_db.d2_post set image="https://d2.naver.com/content/images/2019/10/helloworld-201909-jaesung-park_4-04-1.png" where post_id=677;
+update d2_db.d2_post set image="https://d2.naver.com/content/images/2020/04/dfdf.jpg" where post_id=678;

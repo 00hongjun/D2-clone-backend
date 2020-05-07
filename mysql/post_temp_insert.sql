@@ -132,6 +132,218 @@ VALUES
 "2013.5 시작",
 "https://developers.naver.com/wiki/pages/Community");
 
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(7,
+"오픈소스SW 저변 확대를 위해 \n
+학생과 현업 개발자들을 대상으로 경진대회 진행",
+"D2 FEST 2013",
+"2013.7.5~9.28",
+"http://d2fest.kr/2013/");
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(8,
+"56개 세션, 이틀동안 컨퍼런스 진행 \n
+ 공개 연사 모집 진행, D2 공식 발표 (키노트) \n
+D2 FEST 2013 수상팀 초청, 홍보부스 제공",
+"DEVIEW 2013",
+"2013.10.14~15",
+"https://deview.kr/2013/deview.nhn");
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(9,
+"56개 세션, 이틀동안 컨퍼런스 진행 \n
+ 기술기반 스타트업 대거 참여 \n
+ IoT 분야 주제 확대",
+"DEVIEW 2014",
+"2014",
+"https://deview.kr/2014/");
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(10,
+"대학생 눈높이에 맞춘 세미나 \n
+ 동기부여, 선배 개발자 조언, 프로그래밍 실습 등으로 구성",
+"D2 CAMPUS SEMINAR",
+"2014.8",
+"");
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(11,
+"대학생을 위한 오픈소스 경진대회로 재구성",
+"D2 CAMPUSFEST",
+"2014.3",
+"http://d2fest.kr/2014/");
+
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(12,
+"대학생을 위한 CAMPUS 프로그램 런칭",
+"D2 CAMPUS 프로그램 런칭",
+"2014.2 시작",
+"");
+
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(13,
+"프로젝트 'BLUE' 공개 \n
+로보틱스, 모빌리티 5년간 1000억 투자",
+"DEVIEW 2015",
+"2015.9.14~15",
+"https://deview.kr/2015/");
+
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(14,
+"",
+"D2.naver.com",
+"2015.7.23 오픈",
+"https://d2.naver.com/home");
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(15,
+"아미카, 자율주행, 로보틱스, 웨일 브라우저 등 소개 \n
+ 네이버랩스 최초 로봇 M1 공개",
+"DEVIEW 2016",
+"2016.10.24~25",
+"https://deview.kr/2016/");
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(16,
+"네이버 개발자들과 함께하는 1박 2일 해커톤 시작",
+"D2 CAMPUS HACKDAY",
+"2016.5",
+"");
+
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(17,
+"네이버랩스 유럽, AI/머신러닝 기술적용 사례 다수 발표 \n
+로봇 라인업 9종 공개",
+"DEVIEW 2017",
+"2017.10.16~17",
+"https://deview.kr/2017/");
+
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(18,
+"주제별 기술 공유 세미나 \n
+안드로이드 개발을 주제로 진행",
+"NAVER TECH CONCERT:ANDROID",
+"2018.11.1~2",
+"http://techcon.naver.com/");
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(19,
+"AI, 딥러닝, 빅데이터, 검색, AR, 블록체인 주제 강의 \n
+xDM platform 공개",
+"DEVIEW 2018",
+"2018.10.11~12",
+"https://deview.kr/2018/");
+
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(20,
+"FRONT END 개발 주제",
+"NAVER TECH CONCERT",
+"2019.4.11",
+"http://techcon.naver.com/");
+
+INSERT INTO `d2_db`.`d2_history`
+(`id`,
+`comment`,
+`title`,
+`date`,
+`url`)
+VALUES
+(21,
+"SUMMER HACKDAY 진행",
+"NAVER CAMPUS HACKDAY",
+"2019.5.16~17",
+"https://recruit.navercorp.com/naver/job/list/developer");
+
 INSERT INTO `d2_db`.`d2_category`
 (`category_id`,
 `name`)
