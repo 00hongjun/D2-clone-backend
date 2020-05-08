@@ -376,7 +376,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (668,
-"<p> 아키텍처는 오랫동안 많은 개발자들이 좋아하며 사용한 아키텍처입니다. </p>",
+"아키텍처는 오랫동안 많은 개발자들이 좋아하며 사용한 아키텍처입니다.",
 "/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
 now(),
 "http://d2.naver.com/helloworld/6080222",
@@ -395,7 +395,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (669,
-"<p> NAVER에서는 다양한 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 2019년 12월에 진행한 사내 안드로이드 개발 밋업 중 발표자의 공개 동의를 얻은 발표 영상을 공유합니다. </p>",
+"NAVER에서는 다양한 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 2019년 12월에 진행한 사내 안드로이드 개발 밋업 중 발표자의 공개 동의를 얻은 발표 영상을 공유합니다.",
 "/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
 now(),
 "https://d2.naver.com/news/8738186",
@@ -414,7 +414,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (670,
-"<h4>네이버 개발자와 함께하는 대학생 해커톤!<br/></h4>\n\n<p>올해도 2020 NAVER CAMPUS HACKDAY가 찾아왔어요♬\n </p>",
+"네이버 개발자와 함께하는 대학생 해커톤!\n\n 올해도 2020 NAVER CAMPUS HACKDAY가 찾아왔어요♬\n ",
 "/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
 now(),
 "https://d2.naver.com/news/6826105",
@@ -433,7 +433,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (671,
-"<p>NAVER에서는 다양한 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 2019년 11월에 진행한 사내 UIT 개발 밋업 중 발표자의 공개 동의를 얻은 발표 영상을 공유합니다.</p>",
+"NAVER에서는 다양한 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 2019년 11월에 진행한 사내 UIT 개발 밋업 중 발표자의 공개 동의를 얻은 발표 영상을 공유합니다.",
 "/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
 now(),
 "https://d2.naver.com/news/6826105",
@@ -452,7 +452,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (672,
-"<p>NAVER에서는 매주 사내외 전문가를 초빙하여 테크톡을 진행하고 있는데요. 발표자 분의 공개 동의를 얻어 <a href=\"https://www.facebook.com/naverengineering/\">NAVER Engineering 페이스북</a>에 공개한 AI 주제의 발표 영상(2019년 1월, 5월~10월), 일곱 번째 목록을 정리하였습니다.</p>",
+"NAVER에서는 매주 사내외 전문가를 초빙하여 테크톡을 진행하고 있는데요. 발표자 분의 공개 동의를 얻어 NAVER Engineering 페이스북에 공개한 AI 주제의 발표 영상(2019년 1월, 5월~10월), 일곱 번째 목록을 정리하였습니다.",
 "/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
 now(),
 "https://d2.naver.com/news/7618832",
@@ -471,7 +471,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (673,
-"<p>NAVER에서는 다양한 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 2018년 11월과 2019년 11월에 진행한 사내 Android 밋업 중 발표자의 공개 동의를 얻은 발표 영상을 공유합니다.</p>",
+"NAVER에서는 다양한 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 2018년 11월과 2019년 11월에 진행한 사내 Android 밋업 중 발표자의 공개 동의를 얻은 발표 영상을 공유합니다.",
 "/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
 now(),
 "https://d2.naver.com/news/4699566",
@@ -490,7 +490,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (674,
-"<h4>네이버 개발자와 함께하는 대학생 해커톤!<br/></h4>\n\n<p>2019 NAVER CAMPUS HACKDAY WINTER 열립니다. <br /></p>",
+"네이버 개발자와 함께하는 대학생 해커톤!\n\n2019 NAVER CAMPUS HACKDAY WINTER 열립니다. ",
 "/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
 now(),
 "https://d2.naver.com/news/4972264",
@@ -509,7 +509,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (675,
-"<p>NAVER에서는 다양한 FE 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 이번 FE devtalk 15회 주제는 \"UX Engineering\"으로 다음과 같은 발표들을 살펴보겠습니다. 해당 FE devtalk 중 발표자의 공개 동의를 얻은 영상을 공유합니다.</p>",
+"NAVER에서는 다양한 FE 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 이번 FE devtalk 15회 주제는 \"UX Engineering\"으로 다음과 같은 발표들을 살펴보겠습니다. 해당 FE devtalk 중 발표자의 공개 동의를 얻은 영상을 공유합니다.",
 "/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
 now(),
 "https://d2.naver.com/news/3691882",
@@ -528,7 +528,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (676,
-"<h4>네이버 개발자와 함께하는 대학생 해커톤!<br/></h4>\n\n<p>2019 NAVER CAMPUS HACKDAY SUMMER가 열립니다. <br /></p>",
+"네이버 개발자와 함께하는 대학생 해커톤!\n\n2019 NAVER CAMPUS HACKDAY SUMMER가 열립니다. ",
 "/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
 now(),
 "https://d2.naver.com/news/5009947",
@@ -547,7 +547,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (677,
-"<p>오픈소스는 그 '사용'에 대해서도 그리고 '참가'적인 측면에서 아주 많은 관심을 얻고 있습니다. 그러나 오픈소스 프로젝트를 운영하는 데 있어서 그 뒷모습은 잘 알려져 있지는 않은데요. 다음의 질문들에 대한 궁금증을 NAVER의 박재성 님과 함께 풀어 보고자 합니다. </p>",
+"오픈소스는 그 '사용'에 대해서도 그리고 '참가'적인 측면에서 아주 많은 관심을 얻고 있습니다. 그러나 오픈소스 프로젝트를 운영하는 데 있어서 그 뒷모습은 잘 알려져 있지는 않은데요. 다음의 질문들에 대한 궁금증을 NAVER의 박재성 님과 함께 풀어 보고자 합니다. ",
 "/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
 now(),
 "https://d2.naver.com/news/6617235",
@@ -566,7 +566,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (678,
-"<p>NAVER에서는 다양한 기술에 대한 테크톡과 밋업을 주기적으로 진행하고 있는데요. 2018년 8월, 2019년 1월에 진행한 사내 Golang 밋업의 발표 영상을 공유합니다.</p>",
+"NAVER에서는 다양한 기술에 대한 테크톡과 밋업을 주기적으로 진행하고 있는데요. 2018년 8월, 2019년 1월에 진행한 사내 Golang 밋업의 발표 영상을 공유합니다.",
 "/content/images/2020/02/spring-mvc-and-webflux-venn-1.png",
 now(),
 "https://d2.naver.com/news/3383672",
@@ -586,7 +586,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (651,
-"<p>NAVER에서는 다양한 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 2019년 5월과 6월에 진행한 사내 Android 밋업 중 발표자의 공개 동의를 얻은 발표 영상을 공유합니다.</p>",
+"NAVER에서는 다양한 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 2019년 5월과 6월에 진행한 사내 Android 밋업 중 발표자의 공개 동의를 얻은 발표 영상을 공유합니다.",
 "/content/images/2019/07/----Meetup72_20190625_Android---_-------mp4_20190726_110239-594.jpg",
 now(),
 "https://d2.naver.com/news/9293611",
@@ -605,7 +605,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (650,
-"<p>HDFS(Hadoop Distributed File System)는 기본적으로 데이터 노드의 모든 스토리지를 동일한 유형이라 여기고 작동합니다. 데이터의 읽고 쓰기를 스토리지의 성능을 고려해 알맞은 유형의 스토리지에서 실행하지 않습니다. 그래서 HDD와 SSD를 함께 사용할 때 읽기 쓰기 작업이 많은 데이터를 SSD에 집중해서 저장하게 해 성능을 높일 수 없습니다.</p>",
+"HDFS(Hadoop Distributed File System)는 기본적으로 데이터 노드의 모든 스토리지를 동일한 유형이라 여기고 작동합니다. 데이터의 읽고 쓰기를 스토리지의 성능을 고려해 알맞은 유형의 스토리지에서 실행하지 않습니다. 그래서 HDD와 SSD를 함께 사용할 때 읽기 쓰기 작업이 많은 데이터를 SSD에 집중해서 저장하게 해 성능을 높일 수 없습니다.",
 "/content/images/2019/07/190711_helloworld.jpg",
 now(),
 "http://d2.naver.com/helloworld/7702933",
@@ -624,7 +624,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (649,
-"<p>다양한 컴포넌트의 조합으로 구성된 서비스를 운영하다보면 <br />\n장애나 성능 문제가 발생했을 때 정확한 원인을 파악하는데 시간이 오래 걸린다는 또다른 난제에 부딪히곤 합니다.</p>",
+"다양한 컴포넌트의 조합으로 구성된 서비스를 운영하다보면 \n장애나 성능 문제가 발생했을 때 정확한 원인을 파악하는데 시간이 오래 걸린다는 또다른 난제에 부딪히곤 합니다.",
 "/content/images/2019/06/image.png",
 now(),
 "http://d2.naver.com/helloworld/8819851",
@@ -643,7 +643,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (648,
-"<p>\"<a href=\"https://d2.naver.com/helloworld/7543578\">Google I/O 2017 참관기 - Kotlin</a>\"에서 소개한 것처럼 <a href=\"https://kotlinlang.org/\">Kotlin</a>은 JVM은 물론 Android, JavaScript, 네이티브 영역 등 다양한 플랫폼에서 사용할 수 있는 정적 타입(statically typed) 언어입니다. Java에 비해 코드를 간결하게 작성할 수 있으며, 좀 더 안전하게 null을 다룰 수 있는 문법을 제공하는 것이 주요 특징입니다. 또한 Java와 100% 호환되어 기존 라이브러리를 활용할 수 있습니다. 그래서 기존에 Java로 작성된 프로젝트에 점진적으로 Kotlin을 도입하는 것이 가능합니다.</p>",
+"Google I/O 2017 참관기 - Kotlin에서 소개한 것처럼 Kotlin은 JVM은 물론 Android, JavaScript, 네이티브 영역 등 다양한 플랫폼에서 사용할 수 있는 정적 타입(statically typed) 언어입니다. Java에 비해 코드를 간결하게 작성할 수 있으며, 좀 더 안전하게 null을 다룰 수 있는 문법을 제공하는 것이 주요 특징입니다. 또한 Java와 100% 호환되어 기존 라이브러리를 활용할 수 있습니다. 그래서 기존에 Java로 작성된 프로젝트에 점진적으로 Kotlin을 도입하는 것이 가능합니다.",
 "/content/images/2019/06/helloworld-201906-sangyeong-chung-1.jpg",
 now(),
 "http://d2.naver.com/helloworld/6685007",
@@ -662,7 +662,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (647,
-"<p>매해 겨울방학과 함께했던 D2 CAMPUS FEST가 대학생 개발자 여러분과 더 가까이 하기위해 여름방학을 맞아 FEST mini로 찾아왔습니다. FEST mini는 자유주제 없이 서비스, 모바일 앱, 라이브러리 개발 등 아홉개의 지정주제와 함께합니다.</p>",
+"매해 겨울방학과 함께했던 D2 CAMPUS FEST가 대학생 개발자 여러분과 더 가까이 하기위해 여름방학을 맞아 FEST mini로 찾아왔습니다. FEST mini는 자유주제 없이 서비스, 모바일 앱, 라이브러리 개발 등 아홉개의 지정주제와 함께합니다.",
 "/content/images/2019/06/d2------------------.png",
 now(),
 "http://d2.naver.com/news/8855647",
@@ -681,7 +681,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (646,
-"<p><a href=\"https://webassembly.org/\">WebAssembly</a>는 C와 C++ 같은 프로그래밍 언어를 컴파일해 어느 브라우저에서나 빠르게 실행되는 바이너리 형식(low-level language)으로 바꾸는 기술입니다. 별도의 플러그인을 사용하지 않고 브라우저에서 네이티브 언어 수준의 성능을 보여 줄 수 있는 기술이 WebAssembly의 목표입니다.</p>",
+"WebAssembly는 C와 C++ 같은 프로그래밍 언어를 컴파일해 어느 브라우저에서나 빠르게 실행되는 바이너리 형식(low-level language)으로 바꾸는 기술입니다. 별도의 플러그인을 사용하지 않고 브라우저에서 네이티브 언어 수준의 성능을 보여 줄 수 있는 기술이 WebAssembly의 목표입니다.",
 "/content/images/2019/06/d2------------------.png",
 now(),
 "http://d2.naver.com/helloworld/8786166",
@@ -701,7 +701,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (645,
-"<p>최근 들어 REST API의 단점을 보완하고 더 개선된 사용 환경을 제공하기 위해 네이버의 다양한 서비스에서 <a href=\"https://graphql.org/\">GraphQL</a>을 기반으로 한 <a href=\"https://www.apollographql.com/docs/react/\">Apollo Client</a>를 도입하기 시작했습니다. Apollo Client 도입 이후 기존에 사용하던 <a href=\"https://redux.js.org/\">Redux</a>와 <a href=\"https://reactjs.org/docs/react-component.html\">라이프사이클 메서드</a>의 사용빈도가 줄었습니다. 반면에 GraphQL과 React의 <a href=\"https://reactjs.org/docs/hooks-intro.html\">Hooks</a>에 대한 기본 개념의 숙지가 중요해졌습니다.</p>",
+"최근 들어 REST API의 단점을 보완하고 더 개선된 사용 환경을 제공하기 위해 네이버의 다양한 서비스에서 GraphQL을 기반으로 한 Apollo Client를 도입하기 시작했습니다. Apollo Client 도입 이후 기존에 사용하던 Redux와 라이프사이클 메서드의 사용빈도가 줄었습니다. 반면에 GraphQL과 React의 Hooks에 대한 기본 개념의 숙지가 중요해졌습니다.",
 "/content/images/2019/06/helloworld-201903-seungho-1-1.png",
 now(),
 "http://d2.naver.com/helloworld/4245995",
@@ -720,7 +720,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (644,
-"<p>JavaScript의 인기는 이제는 굳이 언급할 필요가 없어 보일 만큼 계속되고 있습니다. GitHub의 보고서인 <a href=\"https://octoverse.github.com/\">Octoverse</a>의 <a href=\"https://octoverse.github.com/projects#languages\">그래프</a>에 나타난 것처럼 JavaScript는 여러 해 동안 GitHub에서 가장 많이 사용된 언어입니다. Stack Overflow의 최근 설문 조사 결과인 \"<a href=\"https://insights.stackoverflow.com/survey/2019#technology\">Developer Survey Results 2019</a>\"에서는 JavaScript가 가장 인기 있는 기술로 선정되었습니다.</p>",
+"JavaScript의 인기는 이제는 굳이 언급할 필요가 없어 보일 만큼 계속되고 있습니다. GitHub의 보고서인 Octoverse의 그래프에 나타난 것처럼 JavaScript는 여러 해 동안 GitHub에서 가장 많이 사용된 언어입니다. Stack Overflow의 최근 설문 조사 결과인 Developer Survey Results 2019에서는 JavaScript가 가장 인기 있는 기술로 선정되었습니다.",
 "/content/images/2019/06/helloworld-201904-jaesung-park_1-02-1.png",
 now(),
 "http://d2.naver.com/helloworld/4007447",
@@ -740,7 +740,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (643,
-"<blockquote>\n  <p>\"<a href=\"#eng\">Integrating Istio with Telepresence to develop applications that run on a shared Kubernetes cluster locally</a>\"(English)</p>\n</blockquote>\n\n<p><a id=\"kor\"></a> <br />\n<a href=\"https://d2.naver.com/helloworld/7861046\">Telepresence로 Kubernetes 클러스터에서 실행할 애플리케이션을 로컬 환경에서 개발하기</a>\"에서는 Kubernetes 클러스터에서 실행할 애플리케이션을 <a href=\"https://www.telepresence.io/\">Telepresence</a>를 사용해 로컬 환경에서 개발하는 방법을 소개했습니다. 그러나 공용 Kubernetes 클러스터에서 실행되는 여러 애플리케이션으로 구성된 하나의 서비스를 여러 개발자가 개발할 때에는 Telepresence를 사용하기 어렵습니다.</p>",
+"Integrating Istio with Telepresence to develop applications that run on a shared Kubernetes cluster locally(English)\n\n\nTelepresence로 Kubernetes 클러스터에서 실행할 애플리케이션을 로컬 환경에서 개발하기에서는 Kubernetes 클러스터에서 실행할 애플리케이션을 Telepresence를 사용해 로컬 환경에서 개발하는 방법을 소개했습니다. 그러나 공용 Kubernetes 클러스터에서 실행되는 여러 애플리케이션으로 구성된 하나의 서비스를 여러 개발자가 개발할 때에는 Telepresence를 사용하기 어렵습니다.",
 "/content/images/2019/06/helloworld-201904-san-ha-lee_2-1-2.png",
 now(),
 "http://d2.naver.com/helloworld/4817173",
@@ -759,7 +759,7 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (642,
-"<p>NAVER에서는 다양한 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 2019년 2월과 4월에 진행한 사내 iOS 밋업 중 발표자의 공개 동의를 얻은 발표 영상을 공유합니다.</p>",
+"NAVER에서는 다양한 기술에 대한 테크톡을 주기적으로 진행하고 있는데요. 2019년 2월과 4월에 진행한 사내 iOS 밋업 중 발표자의 공개 동의를 얻은 발표 영상을 공유합니다.",
 "/content/images/2019/06/----meetup68_ios--_---_--_20190429-mp4_20190604_154233-863.jpg",
 now(),
 "http://d2.naver.com/news/7569447",
