@@ -14,7 +14,6 @@ public class TopList {
     public TopList(int rank, Post post) {
         this.rank = rank;
         this.postTitle = post.getTitle();
-        this.url =
-                String.format("/%s/%d", post.getCategory().getName(), post.getId());
+        this.url = post.getSocialUrl();
     }
 }
