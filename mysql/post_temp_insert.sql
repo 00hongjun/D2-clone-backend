@@ -8,7 +8,7 @@ INSERT INTO `d2_db`.`d2_schedule`
 `url`)
 VALUES
 (1,
-"",
+"https://d2.naver.com/static/img/app/about/thum_hackday.png",
 "20년 3월 18일 ~ 4월 2일 접수 \n 20년 5월 21일 ~ 5월 22일 핵데이",
 "NAVER CAMPUS HACKDAY",
 "NAVER 개발자와 함께하는 24시간의 해커톤",
@@ -23,7 +23,7 @@ INSERT INTO `d2_db`.`d2_schedule`
 `url`)
 VALUES
 (2,
-"",
+"https://d2.naver.com/static/img/app/about/thum_techconcert.png",
 "20년 7월 예정",
 "NAVER TECH CONCERT",
 "Mobile 개발을 주제로 기술 컨퍼런스 진행",
@@ -38,7 +38,7 @@ INSERT INTO `d2_db`.`d2_schedule`
 `url`)
 VALUES
 (3,
-"",
+"https://d2.naver.com/static/img/app/about/thum_deview.png",
 "20년 9월 예정",
 "DEVIEW",
 "네이버 개발자 컨퍼런스",
