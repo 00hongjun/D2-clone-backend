@@ -376,11 +376,11 @@ INSERT INTO `d2_db`.`d2_post`
 `category_id`)
 VALUES
 (668,
-"아키텍처는 오랫동안 많은 개발자들이 좋아하며 사용한 아키텍처입니다.",
+"Monolithic 아키텍처는 오랫동안 많은 개발자들이 좋아하며 사용한 아키텍처입니다. 하나의 커다란 서비스와 저장소로 구성된 이 아키텍처는 하나의 모듈이 변경되어도 전체 서버를 배포해야 했고 작은 기능의 문제점도 곧 서버 전체의 문제점이 되었습니다. 또한 많은 코드가 엮여 있기 때문에 변화하는 비지니스의 요구 사항에 유연하게 대처하지 못했습니다.",
 "https://d2.naver.com/content/images/2020/04/---.png",
 now(),
 "http://d2.naver.com/helloworld/6080222",
-"이것은 제목이다",
+"Spring WebFlux와 Armeria를 이용하여 Microservice에 필요한 Reactive + RPC 동시에 잡기",
 5825,
 2);
 
