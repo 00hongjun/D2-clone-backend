@@ -867,28 +867,28 @@ INSERT INTO `d2_db`.`d2_tag_post`
 `post_id`)
 VALUES
 (3,
-668);
+650);
 
 INSERT INTO `d2_db`.`d2_tag_post`
 (`tag_id`,
 `post_id`)
 VALUES
 (4,
-668);
+644);
 
 INSERT INTO `d2_db`.`d2_tag_post`
 (`tag_id`,
 `post_id`)
 VALUES
 (5,
-668);
+649);
 
 INSERT INTO `d2_db`.`d2_tag_post`
 (`tag_id`,
 `post_id`)
 VALUES
 (6,
-668);
+648);
 
 INSERT INTO `d2_db`.`d2_post_reply`
 (`reply_id`,
